@@ -1,25 +1,36 @@
 @font-face {
 	font-family: 'Monaspace Neon';
-	src: url('assets/fonts/MonaspaceNeonVarVF[wght\,wdth\,slnt].ttf');
+	src: url('assets/fonts/MonaspaceNeonVarVF[wght\,wdth\,slnt].ttf') format('truetype'),
+		url('assets/fonts/MonaspaceNeonVarVF[wght\,wdth\,slnt].woff') format('woff'),
+		url('assets/fonts/MonaspaceNeonVarVF[wght\,wdth\,slnt].woff2') format('woff2');
 }
 @font-face {
 	font-family: 'Monaspace Argon';
-	src: url('assets/fonts/MonaspaceArgonVarVF[wght\,wdth\,slnt].ttf');
+	src: url('assets/fonts/MonaspaceArgonVarVF[wght\,wdth\,slnt].ttf'),
+		url('assets/fonts/MonaspaceArgonVarVF[wght\,wdth\,slnt].woff') format('woff'),
+		url('assets/fonts/MonaspaceArgonVarVF[wght\,wdth\,slnt].woff2') format('woff2');
 }
 @font-face {
 	font-family: 'Monaspace Xenon';
-	src: url('assets/fonts/MonaspaceXenonVarVF[wght\,wdth\,slnt].ttf');
+	src: url('assets/fonts/MonaspaceXenonVarVF[wght\,wdth\,slnt].ttf'),
+		url('assets/fonts/MonaspaceXenonVarVF[wght\,wdth\,slnt].woff') format('woff'),
+		url('assets/fonts/MonaspaceXenonVarVF[wght\,wdth\,slnt].woff2') format('woff2');
 }
 @font-face {
 	font-family: 'Monaspace Radon';
-	src: url('assets/fonts/MonaspaceRadonVarVF[wght\,wdth\,slnt].ttf');
+	src: url('assets/fonts/MonaspaceRadonVarVF[wght\,wdth\,slnt].ttf'),
+		url('assets/fonts/MonaspaceRadonVarVF[wght\,wdth\,slnt].woff') format('woff'),
+		url('assets/fonts/MonaspaceRadonVarVF[wght\,wdth\,slnt].woff2') format('woff2');
 }
 @font-face {
 	font-family: 'Monaspace Krypton';
-	src: url('assets/fonts/MonaspaceKryptonVarVF[wght\,wdth\,slnt].ttf');
+	src: url('assets/fonts/MonaspaceKryptonVarVF[wght\,wdth\,slnt].ttf'),
+		url('assets/fonts/MonaspaceKryptonVarVF[wght\,wdth\,slnt].woff') format('woff'),
+		url('assets/fonts/MonaspaceKryptonVarVF[wght\,wdth\,slnt].woff2') format('woff2');
 }
 html {
 	scroll-behavior: smooth;
+	text-rendering: optimizeLegibility;
 }
 :root {
 	--red: #FF734D;
@@ -40,6 +51,7 @@ html {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 	scroll-padding: 40px;
+	text-rendering: optimizeLegibility;
 }
 body {
 	background-color: var(--black3);
@@ -102,6 +114,7 @@ em {
 	font-size: 12px;
 	margin: 2px 10px 0 10px;
 	white-space: nowrap;
+	letter-spacing: -.03em;
 }
 .colors {
 	display: flex;
@@ -192,6 +205,9 @@ em {
 	justify-content: center;
 	flex-direction: column;
 	min-height: calc(100dvh - 40px);
+	background:
+		linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,.8) 100%),
+		linear-gradient(var(--primary) 0%, var(--primary) 100%);
 }
 .header-title {
 	font-size: 40px;
@@ -305,8 +321,8 @@ em {
 	align-items: start;
 	overflow-y: scroll;
 	background:
-		linear-gradient(rgba(0,0,0,.8) 0%, rgba(0,0,0,.8) 0%),
-		linear-gradient(var(--primary) 0%, var(--primary) 0%);
+		linear-gradient(rgba(0,0,0,.8) 0%, rgba(0,0,0,.8) 100%),
+		linear-gradient(var(--primary) 0%, var(--primary) 100%);
 }
 .menu h2 {
 	font-size: 24px;
@@ -374,6 +390,9 @@ em {
 main {
 	display: flex;
 	flex-direction: column;
+	background:
+		linear-gradient(rgba(0,0,0,.9) 0%, rgba(0,0,0,.9) 100%),
+		linear-gradient(var(--primary) 0%, var(--primary) 100%);
 }
 .section {
 	display: flex;
