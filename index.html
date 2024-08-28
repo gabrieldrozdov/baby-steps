@@ -4,366 +4,764 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Baby Steps</title>
+
+	<meta name="author" content="GD with GD">
+	<meta name="keywords" content="Web Design, Web Development, Creative Coding, Design Education, Code Education, Tutorial, Pedagogy">
+	<meta name="description" content="Guides to get you started coding websites.">
+	<meta property="og:url" content="https://babysteps.gdwithgd.com/">
+	<meta name="og:title" property="og:title" content="Baby Steps">
+	<meta property="og:description" content="Guides to get you started coding websites.">
+	<meta property="og:image" content="/assets/meta/opengraph.jpg">
+	<link rel="icon" type="png" href="/assets/meta/favicon.png">
+
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="topbar">
-		<h1 class="logo"><a href="/">Baby Steps</a></h1>
-		<div class="topbar-spacer"></div>
-		<p class="topbar-text"><em>Customize your reading experience!</em></p>
-		<div class="colors">
-			<div onclick="setColor('white')" data-color="white"></div>
-			<div onclick="setColor('red')" data-color="red"></div>
-			<div onclick="setColor('blue')" data-color="blue"></div>
-			<div onclick="setColor('purple')" data-color="purple"></div>
-			<div onclick="setColor('yellow')" data-color="yellow"></div>
-			<div onclick="setColor('green')" data-color="green"></div>
-			<div onclick="setColor('pink')" data-color="pink"></div>
-		</div>
-		<div class="fonts">
-			<div onclick="setFont('Monaspace Neon')" data-font="neon">A</div>
-			<div onclick="setFont('Monaspace Argon')" data-font="argon">A</div>
-			<div onclick="setFont('Monaspace Xenon')" data-font="xenon">A</div>
-			<div onclick="setFont('Monaspace Radon')" data-font="radon">A</div>
-			<div onclick="setFont('Monaspace Krypton')" data-font="krypton">A</div>
-		</div>
-	</div>
-
 	<header class="header">
-		<h2 class="header-title">Launch a website from scratch,<br><strong>no experience required</strong></h2>
-		<p class="header-desc">Learn how to create an HTML file, get started with GitHub, and launch a website in 8 easy steps.</p>
-		<div class="header-links">
-			<div class="header-link">
-				<a href="#download-a-text-editor" class="header-link-main">1. Download a text editor</a>
-				<a href="#what-is-a-text-editor" class="header-link-secondary">1.a. What is a text editor?</a>
-				<a href="#how-do-i-pick-a-text-editor" class="header-link-secondary">1.b. How do I pick a text editor?</a>
-			</div>
-			<div class="header-link">
-				<a href="#create-a-github-account" class="header-link-main">2. Create a GitHub account</a>
-				<a href="#what-is-github" class="header-link-secondary">2.a. What is GitHub?</a>
-			</div>
-			<div class="header-link">
-				<a href="#download-and-set-up-github-desktop" class="header-link-main">3. Download and set up GitHub Desktop</a>
-			</div>
-			<div class="header-link">
-				<a href="#create-a-github-repository" class="header-link-main">4. Create a GitHub repository</a>
-			</div>
-			<div class="header-link">
-				<a href="#create-an-index-html-file" class="header-link-main">5. Create an index.html file</a>
-				<a href="#how-do-i-create-a-multi-page-website" class="header-link-secondary">5.a. How do I create a multi-page website?</a>
-			</div>
-			<div class="header-link">
-				<a href="#commit-and-push-your-code-to-the-repository" class="header-link-main">6. Commit and push your code to the repository</a>
-				<a href="#why-do-i-have-to-commit-and-push" class="header-link-secondary">6.a. Why do I have to commit AND push?</a>
-			</div>
-			<div class="header-link">
-				<a href="#deploy-your-repository-on-github-pages" class="header-link-main">7. Deploy your repository on GitHub pages</a>
-				<a href="#whats-a-branch-and-why-did-i-have-to-set-it-to-main" class="header-link-secondary">7.a. What’s a “branch” and why did I have to set it to “main”?</a>
-			</div>
-			<div class="header-link">
-				<a href="#connect-your-website-to-a-custom-url" class="header-link-main">8. Connect your website to a custom URL</a>
-				<a href="#how-do-i-add-a-subdomain-to-my-website" class="header-link-secondary">8.a. How do I add a subdomain to my website?</a>
-			</div>
-		</div>
-		<p class="header-footnote"><em>NOTE: If you’re only looking for step-by-step directions, you can skip the lettered sections and just follow the numbered sections.</em></p>
+		<h1 class="header-title">
+			Baby Steps
+		</h1>
+		<p class="header-desc">
+			Guides to get you started coding websites
+		</p>
+		<p class="header-desc">
+			by <a href="https://gdwithgd.com/" target="_blank" class="header-link">GD with GD</a>
+		</p>
 	</header>
 
-	<div class="content">
-		<nav class="menu">
-			<p><em>If you’re only looking for step-by-step directions, you can skip the lettered sections and just follow the numbered sections.</em></p>
-			<ol>
-				<li><a href="#download-a-text-editor">Download a text editor</a>
-					<ol>
-						<li><a href="#what-is-a-text-editor">What is a text editor?</a></li>
-						<li><a href="#how-do-i-pick-a-text-editor">How do I pick a text editor?</a></li>
-					</ol>
-				</li>
-				<li><a href="#create-a-github-account">Create a GitHub account</a>
-					<ol>
-						<li><a href="#what-is-github">What is GitHub?</a></li>
-					</ol>
-				</li>
-				<li><a href="#download-and-set-up-github-desktop">Download and set up GitHub Desktop</a></li>
-				<li><a href="#create-a-github-repository">Create a GitHub repository</a></li>
-				<li><a href="#create-an-index-html-file">Create an index.html file</a>
-					<ol>
-						<li><a href="#how-do-i-create-a-multi-page-website">How do I create a multi-page website?</a></li>
-						<li><a href="#how-can-i-test-my-website">How can I test my website?</a></li>
-					</ol>
-				</li>
-				<li><a href="#commit-and-push-your-code-to-the-repository">Commit and push your code to the repository</a>
-					<ol>
-						<li><a href="#why-do-i-have-to-commit-and-push">Why do I have to commit AND push?</a></li>
-					</ol>
-				</li>
-				<li><a href="#deploy-your-repository-on-github-pages">Deploy your repository on GitHub pages</a>
-					<ol>
-						<li><a href="#whats-a-branch-and-why-did-i-have-to-set-it-to-main">What’s a “branch” and why did I have to set it to “main”?</a></li>
-						<li><a href="#help-it-wont-let-me-change-the-branch">Help! It won’t let me change the branch!</a></li>
-					</ol>
-				</li>
-				<li><a href="#connect-your-website-to-a-custom-url">Connect your website to a custom URL</a>
-					<ol>
-						<li><a href="#how-do-i-add-a-subdomain-to-my-website">How do I add a subdomain to my website?</a></li>
-					</ol>
-				</li>
-			</ol>
-		</nav>
+	<nav class="nav">
+		<button class="nav-step" onclick="openStep('#step-1');" style="--primary: var(--pink);">1</button>
+		<button class="nav-step" onclick="openStep('#step-2');" style="--primary: var(--green);">2</button>
+		<button class="nav-step" onclick="openStep('#step-3');" style="--primary: var(--blue);">3</button>
+		<button class="nav-step" onclick="openStep('#step-4');" style="--primary: var(--yellow);">4</button>
+		<button class="nav-step" onclick="openStep('#step-5');" style="--primary: var(--purple);">5</button>
+		<button class="nav-step" onclick="openStep('#step-6');" style="--primary: var(--red);">6</button>
+		<button class="nav-step" onclick="openStep('#step-7');" style="--primary: var(--pink);">7</button>
+		<button class="nav-step" onclick="openStep('#step-8');" style="--primary: var(--green);">8</button>
+		<div class="nav-spacer"></div>
+		<button class="nav-toggle" onclick="openAllSteps();">OPEN ALL</button>
+		<button class="nav-toggle" onclick="closeAllSteps();">CLOSE ALL</button>
+	</nav>
 
-		<main>
-			<section id="download-a-text-editor" class="section">
-				<div class="section-header">1. Download a text editor</div>
-
-				<div class="subsection">
-					<h3><a href="#download-a-text-editor">1. Download a text editor</a></h3>
+	<main class="steps">
+		<section class="step" id="step-1" data-active="0" style="--primary: var(--pink);">
+			<h2 class="step-title">
+				<span class="step-title-number">1</span>
+				<span class="step-title-name">Get set up to code</span>
+			</h2>
+			<div class="step-content">
+				<div class="step-list">
 					<p>
-						We write code using a “<a href="https://en.wikipedia.org/wiki/Text_editor" target="_blank">text editor</a>.” A text editor is an application that lets you edit “<a href="https://en.wikipedia.org/wiki/Plain_text" target="_blank">plain text</a>” files. Plain text files don’t store formatting information, like font or color. Instead, they just store the text itself. Code is written and edited as plain text, with the file extension indicating the programming language: “.html” for HTML files, “.css” for CSS files, and “.js” for JavaScript files.
+						To make a website, all you need is a GitHub account, an app to write code with, and a way to upload your code to GitHub.
 					</p>
-					<p>
-						I recommend using the text editor Visual Studio (VS) Code.
-					</p>
-					<a href="https://code.visualstudio.com/" target="_blank" class="subsection-button">Click here to download VS Code!</a>
-					<p>
-						Make sure to download the “Stable” build. The “Insiders” builds let users try out new features before they’re ready for the general public, even if these features still have glitches.
-					</p>
-					<p>
-						If you’re on a Mac, Visual Studio Code will appear in your Downloads folder. You don’t want to run it from there! Instead, move the file to your Applications folder and then run it.
-					</p>
+					<div class="step-list-item">
+						<div class="step-list-item-number">1.1</div>
+						<div class="step-list-item-text">
+							<p>
+								Make an account on <a href="https://github.com/" target="_blank">github.com</a>.
+							</p>
+							<p class="step-list-item-text-small">
+								If you’re a student, make sure to use your personal email and not a school address.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">1.2</div>
+						<div class="step-list-item-text">
+							<p>
+								Download and install the text editor <a href="https://code.visualstudio.com/" target="_blank">Visual Studio (VS) Code</a>.
+							</p>
+							<p class="step-list-item-text-small">
+								Mac users: drag the downloaded file to your Applications folder, which you can access by pressing <span class="text-highlight">COMMAND+SHIFT+A</span> in any Finder window.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">1.3</div>
+						<div class="step-list-item-text">
+							<p>
+								Download and install <a href="https://desktop.github.com/download/" target="_blank">GitHub Desktop</a>.
+							</p>
+							<p class="step-list-item-text-small">
+								Mac users: drag the downloaded file to your Applications folder, which you can access by pressing <span class="text-highlight">COMMAND+SHIFT+A</span> in any Finder window.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">1.4</div>
+						<div class="step-list-item-text">
+							<p>
+								Open GitHub Desktop and do all the setup stuff.
+							</p>
+							<p class="step-list-item-text-small">
+								Log in, fill out all the required info, and leave every setting at its default value.
+							</p>
+						</div>
+					</div>
 				</div>
+			</div>
+		</section>
 
-				<div class="subsection-divider"></div>
-				
-				<div class="subsection" id="what-is-a-text-editor">
-					<h4><a href="#what-is-a-text-editor">1.a. What is a text editor?</a></h4>
-					<p>
-						Code is just text. When we code websites, we primarily code in three programming languages: HTML, CSS, and JavaScript.
-					</p>
-					<p>
-						In HTML, your code might look like this:
-					</p>
-					<figure>
-						<img src="assets/imgs/example-html.jpg">
-						<figcaption>An example of HTML code</figcaption>
-					</figure>
-					<p>
-						In CSS, your code might look like this:
-					</p>
-					<figure>
-						<img src="assets/imgs/example-css.jpg">
-						<figcaption>An example of CSS code</figcaption>
-					</figure>
-					<p>
-						And in JavaScript, your code might look like this:
-					</p>
-					<figure>
-						<img src="assets/imgs/example-js.jpg">
-						<figcaption>An example of JavaScript code</figcaption>
-					</figure>
-					<p>
-						Even though we use a different structure, or syntax, for these three languages, we are still working with text.
-					</p>
-					<p>
-						When we write text, we might use Microsoft Word, Google Docs, or a note-taking app. These types of applications are great because they make it easy to format information in a way that humans can understand. You can pick your font, the size of your text, the way it’s aligned on the page, and more.
-					</p>
-					<p>
-						When we write code, we have different priorities. This is because we’re not necessarily writing code for humans to understand, but instead for computers to understand. Computers don’t care about the aesthetics of your text. Instead, computers just want the information from your text — the text itself.
-					</p>
-					<p>
-						To accomplish this, we’ll need to use a different kind of application called a “<a href="https://en.wikipedia.org/wiki/Text_editor" target="_blank">text editor</a>.” Unlike our usual word processors, text editors don’t store visual information like font or color. Text editors are designed to deal exclusively with “<a href="https://en.wikipedia.org/wiki/Plain_text" target="_blank">plain text</a>” — files of text that don’t contain formatting.
-					</p>
-					<p>
-						You might have noticed in the previous examples of code that the text is multiple colors, though. This is an automatic process called “syntax highlighting.” Programming languages like HTML, CSS, and JavaScript follow very precise rules for how to structure code. Otherwise, computers won’t be able to understand it! To make your life easier, modern text editors will dynamically color your code to let you know if you’re following the correct syntax.
-					</p>
-					<p>
-						How does a text editor know which language your code is in? That’s easy — you indicate the language when you save a file of code! An HTML file will have the extension “.html”, a CSS will have “.css”, and a JavaScript file will have “.js”. For example, we commonly see files using the name index.html, style.css, and script.js. On the inside, these files are all just plain text, but your text editor and computer will understand what language to look for by checking out the file extension.
-					</p>
+		<section class="step" id="step-2" data-active="0" style="--primary: var(--green);">
+			<h2 class="step-title">
+				<span class="step-title-number">2</span>
+				<span class="step-title-name">Make a GitHub repository</span>
+			</h2>
+			<div class="step-content">
+				<p>
+					A GitHub repository is a folder that stores your website’s code and other assets (like images, fonts, etc.).
+				</p>
+				<div class="step-list">
+					<div class="step-list-item">
+						<div class="step-list-item-number">2.1</div>
+						<div class="step-list-item-text">
+							<p>
+								Open up GitHub Desktop.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">2.2</div>
+						<div class="step-list-item-text">
+							<p>
+								Open the repository menu in the top-left corner.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">2.3</div>
+						<div class="step-list-item-text">
+							<p>
+								Click <span class="text-highlight">Add</span> and then <span class="text-highlight">Create New Repository...</span>
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">2.4</div>
+						<div class="step-list-item-text">
+							<p>
+								Give your repository a name.
+							</p>
+							<p class="step-list-item-text-small">
+								Your repository name will become its URL later on: <span class="text-highlight">[your-github-username].github.io/[your-repository-name]</span><br>
+								You can leave the rest of the settings at their default values.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">2.5</div>
+						<div class="step-list-item-text">
+							<p>
+								Click <span class="text-highlight">Create Repository</span>
+							</p>
+							<p class="step-list-item-text-small">
+								You have just made a folder on your computer with the same name you inputted into GitHub Desktop. By default, this folder will be located in <span class="text-highlight">Documents &gt; GitHub &gt; [your-repository]</span>. You can also press <span class="text-highlight">Mac: COMMAND+SHIFT+F</span> <span class="text-highlight">Windows: CTRL+SHIFT+F</span> to view the folder. I don’t recommend moving it out of this location.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">2.6</div>
+						<div class="step-list-item-text">
+							<p>
+								Click <span class="text-highlight">Publish repository</span>
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">2.7</div>
+						<div class="step-list-item-text">
+							<p>
+								Make sure that <span class="text-highlight">Keep this code private</span> is NOT checked. Then, press <span class="text-highlight">Publish Repository</span>
+							</p>
+							<p class="step-list-item-text-small">
+								Your repository will now be accessible on github.com. To find it online, open the menu by clicking your profile picture in the top-right corner and then pressing <span class="text-highlight">Your repositories</span>. You can also press <span class="text-highlight">Mac: COMMAND+SHIFT+G</span> <span class="text-highlight">Windows: CTRL+SHIFT+G</span> to open its affiliated webpage.
+							</p>
+						</div>
+					</div>
 				</div>
+				<p>
+					Alternatively, you can create a repository directly on github.com. If you make your repository online, you’ll need to download it to GitHub Desktop. To do that, click <span class="text-highlight">Clone Repository...</span> in Step 2.3 instead of <span class="text-highlight">Create New Repository...</span>
+				</p>
+			</div>
+		</section>
 
-				<div class="subsection-divider"></div>
-
-				<div class="subsection" id="how-do-i-pick-a-text-editor">
-					<h4><a href="#how-do-i-pick-a-text-editor">1.b. How do I pick a text editor?</a></h4>
-					<p>
-						Just like word processors, there are multiple text editors to pick from. While there is no wrong choice for a text editor, you might want to pick one that is commonly used and actively maintained. Text editors also come with other features to make writing and editing code easier and faster, so that should play into your decision.
-					</p>
-					<p>
-						Right now, a very popular text editor is <a href="https://code.visualstudio.com/" target="_blank"></a>Visual Studio (VS) Code. VS Code is owned and maintained by Microsoft, who also owns the popular code distribution platform <a href="https://github.com/" target="_blank"></a>GitHub. Because of Microsoft’s ownership of both platforms, VS Code works well with GitHub and is <a href="https://github.com/microsoft/vscode" target="_blank">regularly updated</a>, meaning that coders can rely on it to stay up-to-date on emerging technologies and new trends. Because of VS Code’s popularity, there is also a thriving community of free extensions that make the text editor more useful for things like web development.
-					</p>
-					<p>
-						Sidenote: while you can edit any language of code in any text editor, some languages work best in specific text editors. HTML, CSS, and JavaScript will work fine pretty much anywhere, but certain languages like R have dedicated text editors like R Studio. This often happens when a programming language develops a community for a special use case, like data visualization with R. In this case, you wouldn’t want to edit HTML in <a href="https://posit.co/download/rstudio-desktop/" target="_blank">R Studio</a>, and you might not want to edit R in VS Code.
-					</p>
-					<figure>
-						<img src="assets/imgs/example-rstudio.jpg">
-						<figcaption>A data visualization project in R Studio</figcaption>
-					</figure>
-					<p>
-						Besides popularity, you should also consider what text editor feels most comfortable to you. Other text editors, like <a href="https://www.sublimetext.com/" target="_blank">Sublime</a> or <a href="https://www.vim.org/" target="_blank">Vim</a>, have dedicated fan bases because of their respective features. Whatever editor you choose is up to you, and it isn’t hard to switch editors if you’re not liking the one you’re using.
-					</p>
+		<section class="step" id="step-3" data-active="0" style="--primary: var(--blue);">
+			<h2 class="step-title">
+				<span class="step-title-number">3</span>
+				<span class="step-title-name">Code a single-page site</span>
+			</h2>
+			<div class="step-content">
+				<p>
+					The minimum requirement for making a website is a single HTML file.
+				</p>
+				<div class="step-list">
+					<div class="step-list-item">
+						<div class="step-list-item-number">3.1</div>
+						<div class="step-list-item-text">
+							<p>
+								Open Visual Studio Code.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">3.2</div>
+						<div class="step-list-item-text">
+							<p>
+								Go to <span class="text-highlight">File &gt; Open Folder</span> in the menu bar at the top and navigate to the repository you just made.
+							</p>
+							<p class="step-list-item-text-small">
+								It should be in <span class="text-highlight">Documents &gt; GitHub &gt; [your-repository]</span>. Alternatively, you can just drag your folder into the Visual Studio Code icon, or press <span class="text-highlight">Mac: COMMAND+SHIFT+A</span> <span class="text-highlight">Windows: CTRL+SHIFT+A</span> in GitHub Desktop.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">3.3</div>
+						<div class="step-list-item-text">
+							<p>
+								Press <span class="text-highlight">Mac: COMMAND+N</span> <span class="text-highlight">Windows: CTRL+N</span> to create a new file.
+							</p>
+							<p class="step-list-item-text-small">
+								Alternatively, go to <span class="text-highlight">File &gt; New Text File</span> in the menu bar at the top.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">3.4</div>
+						<div class="step-list-item-text">
+							<p>
+								Press <span class="text-highlight">Mac: COMMAND+SHIFT+S</span> <span class="text-highlight">Windows: CTRL+SHIFT+S</span> to save your file. Name it <span class="text-highlight">index.html</span> and save it to your repository.
+							</p>
+							<p class="step-list-item-text-small">
+								Alternatively, go to <span class="text-highlight">File &gt; Save As...</span> in the menu bar at the top.
+							</p>
+						</div>
+					</div>
 				</div>
-			</section>
-
-			<div class="section-divider"></div>
-
-			<section id="create-a-github-account" class="section">
-				<div class="section-header">2. Create a GitHub account</div>
-
-				<div class="subsection">
-					<h3><a href="#create-a-github-account">2. Create a GitHub account</a></h3>
-					<p>
-						asdf
-					</p>
-					<a href="https://code.visualstudio.com/" target="_blank" class="subsection-button">Click here to sign up on GitHub!</a>
+				<p class="step-callout">
+					<strong>You HAVE to call your file <span class="text-highlight">index.html</span>. Why?</strong>
+					<span>When you visit a website, all you’re really doing is downloading and viewing some files from another computer (usually located in a <a href="https://en.wikipedia.org/wiki/Server_farm" target="_blank">server farm</a>). For example, <a href="https://github.com/gabrieldrozdov/baby-steps" target="_blank">here is the folder</a> with all the files for <span class="text-highlight">babysteps.gdwithgd.com</span>.</span>
+					<span>By going to <span class="text-highlight">babysteps.gdwithgd.com</span>, you’re actually accessing this folder. Your computer then knows to look for the <span class="text-highlight">index.html</span> file in that folder, which it opens automatically.</span>
+					<span>If you named the file something else, like <span class="text-highlight">homepage.html</span> for example, you would get a <a href="https://en.wikipedia.org/wiki/HTTP_404" target="_blank">404 error</a> visiting <span class="text-highlight">babysteps.gdwithgd.com</span>. Instead, you’d have to go to <span class="text-highlight">babysteps.gdwithgd.com/homepage.html</span>.</span>
+				</p>
+				<div class="step-list">
+					<div class="step-list-item">
+						<div class="step-list-item-number">3.5</div>
+						<div class="step-list-item-text">
+							<p>
+								Type <span class="text-highlight">!</span> into your text file and press <span class="text-highlight">Mac: RETURN</span> <span class="text-highlight">Windows: ENTER</span>. Your file should now contain a template for an HTML document.
+							</p>
+							<p class="step-list-item-text-small">
+								Learn more about what this template means <a href="https://www.freecodecamp.org/news/html-starter-template-a-basic-html5-boilerplate-for-index-html/" target="_blank">here</a>.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">3.6</div>
+						<div class="step-list-item-text">
+							<p>
+								In between the <span class="text-highlight">&lt;body&gt;</span> and <span class="text-highlight">&lt;/body&gt;</span> lines of your code, write <span class="text-highlight">Hello world!</span>
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">3.7</div>
+						<div class="step-list-item-text">
+							<p>
+								Save your file again by pressing <span class="text-highlight">Mac: COMMAND+S</span> <span class="text-highlight">Windows: CTRL+S</span>
+							</p>
+							<p class="step-list-item-text-small">
+								Alternatively, go to <span class="text-highlight">File &gt; Save</span> in the menu bar at the top.
+							</p>
+						</div>
+					</div>
 				</div>
+			</div>
+		</section>
 
-				<div class="subsection-divider"></div>
-				
-				<div class="subsection" id="what-is-github">
-					<h4><a href="#what-is-github">2.a. What is GitHub?</a></h4>
-					<p>
-						asdf
-					</p>
+		<section class="step" id="step-4" data-active="0" style="--primary: var(--yellow);">
+			<h2 class="step-title">
+				<span class="step-title-number">4</span>
+				<span class="step-title-name">Test your site in a browser</span>
+			</h2>
+			<div class="step-content">
+				<p>
+					Your website doesn’t need to be live on the internet to view it. In this guide, we’ll learn how to preview your site before publishing it online.
+				</p>
+				<div class="step-list">
+					<div class="step-list-item">
+						<div class="step-list-item-number">4.1</div>
+						<div class="step-list-item-text">
+							<p>
+								Make sure your repository is open in Visual Studio Code.
+							</p>
+							<p class="step-list-item-text-small">
+								If it’s not, open Visual Studio Code and go to <span class="text-highlight">File &gt; Open Folder</span> in the menu bar at the top and navigate to your repository. It should be in <span class="text-highlight">Documents &gt; GitHub &gt; [your-repository]</span>. Alternatively, you can just drag your folder into the Visual Studio Code icon, or press <span class="text-highlight">Mac: COMMAND+SHIFT+A</span> <span class="text-highlight">Windows: CTRL+SHIFT+A</span> in GitHub Desktop.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">4.2</div>
+						<div class="step-list-item-text">
+							<p>
+								Download and install the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server extension</a>.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">4.3</div>
+						<div class="step-list-item-text">
+							<p>
+								Open the <span class="text-highlight">index.html</span> file from your repository in Visual Studio Code.
+							</p>
+							<p class="step-list-item-text-small">
+								You can select it from the Explorer sidebar. If the sidebar is closed, click the icon in the top-left corner of Visual Studio Code or press <span class="text-highlight">Mac: COMMAND+B</span> <span class="text-highlight">Windows: CTRL+B</span>
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">4.4</div>
+						<div class="step-list-item-text">
+							<p>
+								Press <span class="text-highlight">Go Live</span> in the bottom-right corner. This will open a live preview of your site in your web browser.
+							</p>
+							<p class="step-list-item-text-small">
+								Alternatively, press <span class="text-highlight">Mac: COMMAND+L+O</span> <span class="text-highlight">Windows: ALT+L+O</span> to preview your site. If you ever accidentally close the in-browser preview, you can use this shortcut to reopen it.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">4.5</div>
+						<div class="step-list-item-text">
+							<p>
+								Now, whenever you make changes to your site and save your file with <span class="text-highlight">Mac: COMMAND+S</span> <span class="text-highlight">Windows: CTRL+S</span>, your in-browser preview will automatically update!
+							</p>
+							<p class="step-list-item-text-small">
+								You can use <span class="text-highlight">Mac: COMMAND+L+O</span> <span class="text-highlight">Windows: ALT+L+O</span> to preview any .html file you have open in Visual Studio Code.
+							</p>
+						</div>
+					</div>
 				</div>
-			</section>
+				<p>
+					You can also drag any .html file into a web browser to preview it, but this won’t always provide an accurate preview of how your site will look once it goes live.
+				</p>
+			</div>
+		</section>
 
-			<div class="section-divider"></div>
-			
-			<section id="download-and-set-up-github-desktop" class="section">
-				<div class="section-header">3. Download and set up GitHub Desktop</div>
-
-				<div class="subsection">
-					<h3><a href="#download-and-set-up-github-desktop">3. Download and set up GitHub Desktop</a></h3>
-					<p>
-						asdf
-					</p>
-					<a href="https://code.visualstudio.com/" target="_blank" class="subsection-button">Click here to sign up on GitHub!</a>
+		<section class="step" id="step-5" data-active="0" style="--primary: var(--purple);">
+			<h2 class="step-title">
+				<span class="step-title-number">5</span>
+				<span class="step-title-name">Launch your site on GitHub Pages</span>
+			</h2>
+			<div class="step-content">
+				<div class="step-list">
+					<div class="step-list-item">
+						<div class="step-list-item-number">5.1</div>
+						<div class="step-list-item-text">
+							<p>
+								Open your repository in GitHub Desktop.
+							</p>
+							<p class="step-list-item-text-small">
+								If your repository isn’t already open, select it from the drop-down menu in the top-left corner.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">5.2</div>
+						<div class="step-list-item-text">
+							<p>
+								Fill out the <span class="text-highlight">Summary</span> field with something like “Initial commit” (the exact text doesn’t matter) and press <span class="text-highlight">Commit to main</span>. 
+							</p>
+							<p class="step-list-item-text-small">
+								You’ve just created a code commit, which is like saving a version of your repository’s files. The <span class="text-highlight">Summary</span> and <span class="text-highlight">Description</span> fields are there to help you keep track of your commits in case you want to roll back to a previous version later on.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">5.3</div>
+						<div class="step-list-item-text">
+							<p>
+								Click <span class="text-highlight">Push origin</span>.
+							</p>
+							<p class="step-list-item-text-small">
+								Pushing your code uploads the most recent commit to your public repository on github.com.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">5.4</div>
+						<div class="step-list-item-text">
+							<p>
+								Navigate to your repository on github.com by pressing <span class="text-highlight">Mac: COMMAND+SHIFT+G</span> <span class="text-highlight">Windows: CTRL+SHIFT+G</span> in GitHub Desktop.
+							</p>
+							<p class="step-list-item-text-small">
+								You can also do this by going to github.com, clicking your profile picture to open the menu, and then going to Your repositories.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">5.5</div>
+						<div class="step-list-item-text">
+							<p>
+								In the menu at the top, go to <span class="text-highlight">Settings</span>. From there, click <span class="text-highlight">Pages</span> from the sidebar.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">5.6</div>
+						<div class="step-list-item-text">
+							<p>
+								In the <span class="text-highlight">Branch</span> section, change the <span class="text-highlight">None</span> dropdown to <span class="text-highlight">main</span> and click <span class="text-highlight">Save</span>
+							</p>
+							<p class="step-list-item-text-small">
+								If you’re unable to do this, your repository is likely set to private. To change this, click <span class="text-highlight">General</span> from the sidebar, scroll all the way to the bottom, and click <span class="text-highlight">Change visibility</span>. A series of scary pop-ups will try to warn you, but ignore them and keep proceeding.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">5.7</div>
+						<div class="step-list-item-text">
+							<p>
+								After around a minute, your site should be live! Its URL will be <span class="text-highlight">[your-github-username].github.io/[your-repository-name]</span>
+							</p>
+							<p class="step-list-item-text-small">
+								To check on the status of your site, go to the <span class="text-highlight">Actions</span> tab in the menu at the top. There should be workflow running to deploy your website. Once it’s finished, you’ll find a link to your site’s URL back in the <span class="text-highlight">Settings &gt; Pages</span> menu.
+							</p>
+						</div>
+					</div>
 				</div>
-			</section>
+				<p>
+					A website is just a series of files that you can view in your web browser. What we just did is ask GitHub to load our files when a specific URL is accessed. Now, when you go to your URL, one of GitHub’s computers sends you the right files. This is called <a href="https://en.wikipedia.org/wiki/Static_web_page" target="_blank">static web hosting</a> (because a visitor can’t change any of the files — they can only view them).
+				</p>
+			</div>
+		</section>
 
-			<div class="section-divider"></div>
-
-			<section id="create-a-github-repository" class="section">
-				<div class="section-header">4. Create a GitHub repository</div>
-
-				<div class="subsection">
-					<h3><a href="#create-a-github-repository">4. Create a GitHub repository</a></h3>
-					<p>
-						asdf
-					</p>
-					<a href="https://code.visualstudio.com/" target="_blank" class="subsection-button">Click here to sign up on GitHub!</a>
+		<section class="step" id="step-6" data-active="0" style="--primary: var(--red);">
+			<h2 class="step-title">
+				<span class="step-title-number">6</span>
+				<span class="step-title-name">Add more pages to your site</span>
+			</h2>
+			<div class="step-content">
+				<p>
+					Every page on your site is a .html file. If you have a single-page website, you have at least one file: the <span class="text-highlight">index.html</span> file we made in <a href="#step-3" onclick="openStep('#step-3')">Step 3</a>.
+				</p>
+				<p>
+					To add more pages, we’re going to add more folders to our repository, each with its own <span class="text-highlight">index.html</span> file.
+				</p>
+				<p>
+					Here’s an example of the folder structure for a website with a few pages:
+				</p>
+				<div class="folder" style="--primary: var(--pink);">
+					<div class="folder-name">[your-repository-name]</div>
+					<div class="folder-files">
+						<div class="folder-file">index.html</div>
+					</div>
+					<div class="folder" style="--primary: var(--green);">
+						<div class="folder-name">about</div>
+						<div class="folder-files">
+							<div class="folder-file">index.html</div>
+						</div>
+					</div>
+					<div class="folder" style="--primary: var(--green);">
+						<div class="folder-name">projects</div>
+						<div class="folder-files">
+							<div class="folder-file">index.html</div>
+						</div>
+						<div class="folder-break"></div>
+						<div class="folder" style="--primary: var(--blue);">
+							<div class="folder-name">project-1</div>
+							<div class="folder-files">
+								<div class="folder-file">index.html</div>
+							</div>
+						</div>
+						<div class="folder-break"></div>
+						<div class="folder" style="--primary: var(--blue);">
+							<div class="folder-name">project-2</div>
+							<div class="folder-files">
+								<div class="folder-file">index.html</div>
+							</div>
+						</div>
+						<div class="folder-break"></div>
+						<div class="folder" style="--primary: var(--blue);">
+							<div class="folder-name">project-3</div>
+							<div class="folder-files">
+								<div class="folder-file">index.html</div>
+							</div>
+						</div>
+					</div>
 				</div>
-			</section>
-
-			<div class="section-divider"></div>
-
-			<section id="create-an-index-html-file" class="section">
-				<div class="section-header">5. Create an index.html file</div>
-
-				<div class="subsection">
-					<h3><a href="#create-an-index-html-file">5. Create an index.html file</a></h3>
-					<p>
-						asdf
-					</p>
-					<a href="https://code.visualstudio.com/" target="_blank" class="subsection-button">Click here to sign up on GitHub!</a>
+				<p>
+					What does that all add up to? Let’s see the URLs that would correspond to each folder.
+				</p>
+				<div class="folder" style="--primary: var(--pink);">
+					<div class="folder-name">[your-repository-name]</div>
+					<div class="folder-files">
+						<div class="folder-file">[your-site].com</div>
+					</div>
+					<div class="folder" style="--primary: var(--green);">
+						<div class="folder-name">about</div>
+						<div class="folder-files">
+							<div class="folder-file">[your-site].com/about/</div>
+						</div>
+					</div>
+					<div class="folder" style="--primary: var(--green);">
+						<div class="folder-name">projects</div>
+						<div class="folder-files">
+							<div class="folder-file">[your-site].com/projects/</div>
+						</div>
+						<div class="folder-break"></div>
+						<div class="folder" style="--primary: var(--blue);">
+							<div class="folder-name">project-1</div>
+							<div class="folder-files">
+								<div class="folder-file">[your-site].com/projects/project-1/</div>
+							</div>
+						</div>
+						<div class="folder-break"></div>
+						<div class="folder" style="--primary: var(--blue);">
+							<div class="folder-name">project-2</div>
+							<div class="folder-files">
+								<div class="folder-file">[your-site].com/projects/project-2/</div>
+							</div>
+						</div>
+						<div class="folder-break"></div>
+						<div class="folder" style="--primary: var(--blue);">
+							<div class="folder-name">project-3</div>
+							<div class="folder-files">
+								<div class="folder-file">[your-site].com/projects/project-3/</div>
+							</div>
+						</div>
+					</div>
 				</div>
-
-				<div class="subsection-divider"></div>
-				
-				<div class="subsection" id="how-do-i-create-a-multi-page-website">
-					<h4><a href="#how-do-i-create-a-multi-page-website">5.a. What is GitHub?</a></h4>
-					<p>
-						asdf
-					</p>
+				<p>
+					We can link between folders using the <span class="text-highlight">&lt;a&gt;</span> HTML element. This element lets you link to other websites or between pages on a single site.
+				</p>
+				<p class="step-callout">
+					<strong>Confused? Let’s try out a demo site!</strong>
+					<span><a href="/assets/demos/multi-page-website.zip">Click here</a> to download the code for a website with multiple pages. Unzip this folder and open it in Visual Studio Code. Then start Live Server to see how the navigation works between pages.</span>
+					<span>One warning: dragging these files into your web browser to test them directly won’t work in this case. Live Server is required for testing proper links.</span>
+					<span>If you’ve done everything right, the demo should look like <a href="/assets/demos/multi-page-website/" target="_blank">this</a>.</span>
+				</p>
+				<p>
+					Let’s summarize how to make a multi-page website:
+				</p>
+				<div class="step-list">
+					<div class="step-list-item">
+						<div class="step-list-item-number">6.1</div>
+						<div class="step-list-item-text">
+							<p>
+								For each page on your website, create a subfolder.
+							</p>
+							<p class="step-list-item-text-small">
+								You can set up a URL structure by putting subfolders in subfolders. For example, by making a <span class="text-highlight">projects</span> folder with a subfolder <span class="text-highlight">project-1</span>, your URL will be <span class="text-highlight">[your-site].com/projects/project-1</span>.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">6.2</div>
+						<div class="step-list-item-text">
+							<p>
+								Create an <span class="text-highlight">index.html</span> in each of the subfolders you just created.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">6.3</div>
+						<div class="step-list-item-text">
+							<p>
+								To link to a subfolder, create an HTML element using the following format: <span class="text-highlight">&lt;a href="[folder-name]/"&gt;I’m a link!&lt;a&gt;</span>
+							</p>
+							<p class="step-list-item-text-small">
+								You can do the same thing to link to multiple nested subfolders: <span class="text-highlight">&lt;a href="[folder-1-name]/[folder-2-name]/"&gt;I’m a link!&lt;a&gt;</span>
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">6.4</div>
+						<div class="step-list-item-text">
+							<p>
+								To link to a parent folder, create an HTML element using the following format: <span class="text-highlight">&lt;a href="../"&gt;I’m a link!&lt;a&gt;</span>
+							</p>
+							<p class="step-list-item-text-small">
+								You can do the same thing to link to multiple parent folders: <span class="text-highlight">&lt;a href="../../"&gt;I’m a link!&lt;a&gt;</span>.
+								If you want to navigate to a parent and then another subfolder, you can combine the previous two steps: <span class="text-highlight">&lt;a href="../[parent-subfolder-name]/"&gt;I’m a link!&lt;a&gt;</span>
+							</p>
+						</div>
+					</div>
 				</div>
+				<p class="step-callout">
+					<strong>OK, I lied a little bit.</strong>
+					<span>Technically, you can name .html files whatever you want and link to them directly. However, then you will end up with .html at the end of your URL.</span>
+					<span>For example, we can have a file called <span class="text-highlight">cool-page.html</span>. We can then link to that file with <span class="text-highlight">&lt;a href="cool-page.html"&gt;Go to a cool page!&lt;a&gt;</span></span>
+					<span>You’re likely to encounter situations in the real world where organizations have multiple .html files in one folder. <a href="https://www.nytimes.com/2024/08/27/arts/music/oasis-reunion-tour.html" target="_blank">Here’s an example from The New York Times</a>, which we can tell uses the folder structure <span class="text-highlight">2024/08/27/arts/music/</span> from the URL structure.</span>
+				</p>
+			</div>
+		</section>
 
-				<div class="subsection-divider"></div>
-				
-				<div class="subsection" id="how-can-i-test-my-website">
-					<h4><a href="#how-can-i-test-my-website">5.a. What is GitHub?</a></h4>
-					<p>
-						asdf
-					</p>
+		<section class="step" id="step-7" data-active="0" style="--primary: var(--pink);">
+			<h2 class="step-title">
+				<span class="step-title-number">7</span>
+				<span class="step-title-name">Update your live site</span>
+			</h2>
+			<div class="step-content">
+				<div class="step-list">
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.1</div>
+						<div class="step-list-item-text">
+							<p>
+								Open your repository in GitHub Desktop.
+							</p>
+							<p class="step-list-item-text-small">
+								If your repository isn’t already open, select it from the drop-down menu in the top-left corner.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.2</div>
+						<div class="step-list-item-text">
+							<p>
+								Fill out the <span class="text-highlight">Summary</span> field with something that describes what you changed (the exact text doesn’t matter) and press <span class="text-highlight">Commit to main</span>
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.3</div>
+						<div class="step-list-item-text">
+							<p>
+								Click <span class="text-highlight">Push origin</span>
+							</p>
+						</div>
+					</div>
 				</div>
-			</section>
+				<p>
+					That’s it! Once your site is live, it will automatically updates after a few minutes every time you push your commits. Make sure you push your code, because just creating commits won’t update your live site.
+				</p>
+			</div>
+		</section>
 
-			<div class="section-divider"></div>
-
-			<section id="commit-and-push-your-code-to-the-repository" class="section">
-				<div class="section-header">6. Commit and push your code to the repository</div>
-
-				<div class="subsection">
-					<h3><a href="#commit-and-push-your-code-to-the-repository">6. Commit and push your code to the repository</a></h3>
-					<p>
-						asdf
-					</p>
-					<a href="https://code.visualstudio.com/" target="_blank" class="subsection-button">Click here to sign up on GitHub!</a>
+		<section class="step" id="step-8" data-active="0" style="--primary: var(--green);">
+			<h2 class="step-title">
+				<span class="step-title-number">8</span>
+				<span class="step-title-name">Connect to a custom URL</span>
+			</h2>
+			<div class="step-content">
+				<div class="step-list">
+					<div class="step-list-item">
+						<div class="step-list-item-number">8.1</div>
+						<div class="step-list-item-text">
+							<p>
+								Make an account on <a href="https://www.namecheap.com/" target="_blank">namecheap.com</a>.
+							</p>
+							<p class="step-list-item-text-small">
+								If you’re a student, make sure to use your personal email and not a school address. Namecheap is a marketplace for leasing domains (URLs) from, but there are many other competing services for the same thing. Domain names cannot be purchased outright, so we buy from companies like Namecheap because they handle a lot of the expensive logistics that go into internationally managing domain licenses.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">8.2</div>
+						<div class="step-list-item-text">
+							<p>
+								<a href="https://www.namecheap.com/domains/" target="_blank">Search for a domain you want to purchase and add it to your cart.</a>
+							</p>
+							<p class="step-list-item-text-small">
+								These can vary wildly in price, but most .com domains are below $20 per year.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">8.3</div>
+						<div class="step-list-item-text">
+							<p>
+								Buy your domain (no need to purchase any of the extra add-ons advertised at checkout).
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">8.4</div>
+						<div class="step-list-item-text">
+							<p>
+								Head to your <a href="https://ap.www.namecheap.com/" target="_blank">account dashboard</a> on namecheap.com (accessed via the <span class="text-highlight">Account</span> dropdown in the navbar).
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">8.5</div>
+						<div class="step-list-item-text">
+							<p>
+								Find your domain name (the URL you purchased) in the list and click <span class="text-highlight">Manage</span>.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">8.6</div>
+						<div class="step-list-item-text">
+							<p>
+								Click on the <span class="text-highlight">Advanced DNS</span> menu.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">8.7</div>
+						<div class="step-list-item-text">
+							<p>
+								In the <span class="text-highlight">Host Records</span> section, you’ll find several records (like a “CNAME Record” or something similar). Delete all the existing entries.
+							</p>
+							<p class="step-list-item-text-small">
+								These placeholder records provide a temporary “parking” page for your site that shows it has been purchased if you try visiting it.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">8.8</div>
+						<div class="step-list-item-text">
+							<p>
+								Add several new records (as indicated by <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages/" target="_blank">Namecheap’s GitHub Pages tutorial</a>):<br>
+								<span class="text-highlight">Type: A, Host: @, Value: 185.199.108.153</span><br>
+								<span class="text-highlight">Type: A, Host: @, Value: 185.199.109.153</span><br>
+								<span class="text-highlight">Type: A, Host: @, Value: 185.199.110.153</span><br>
+								<span class="text-highlight">Type: A, Host: @, Value: 185.199.111.153</span><br>
+								<span class="text-highlight">Type: CNAME, Host: www, Value: [your-github-username].github.io</span>
+							</p>
+							<p class="step-list-item-text-small">
+								These records point your domain to your GitHub account. Alternatively, you can have your site live on a subdomain of your URL. This is like the “babysteps” part of “babysteps.gdwithgd.com”. To do this, add the following record instead of the “CNAME” record listed above: <span class="text-highlight">Type: CNAME, Host: www, Value: [your-github-username].github.io</span>. There is no limit to the number of subdomains you can host on a single domain.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">8.9</div>
+						<div class="step-list-item-text">
+							<p>
+								On github.com, go to your repository’s page, click <span class="text-highlight">Settings</span>, and then go to the <span class="text-highlight">Pages</span> submenu from the sidebar.
+							</p>
+							<p class="step-list-item-text-small">
+								You can access your repository’s page by pressing <span class="text-highlight">Mac: COMMAND+SHIFT+G</span> <span class="text-highlight">Windows: CTRL+SHIFT+G</span> in GitHub Desktop, or by clicking your profile picture on github.com and then going to Your repositories.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">8.10</div>
+						<div class="step-list-item-text">
+							<p>
+								In the <span class="text-highlight">Custom domain</span> field, add the url of the domain name you are trying to connect (e.g. gdwithgd.com). Press <span class="text-highlight">Save</span>.
+							</p>
+							<p class="step-list-item-text-small">
+								You must have already launched your site on GitHub Pages to see this field.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">8.11</div>
+						<div class="step-list-item-text">
+							<p>
+								Your site will now go through some automatic checks to make sure everything is working properly. Once those checks are complete, check <span class="text-highlight">Enforce HTTPS</span>. You may need to refresh the <span class="text-highlight">Pages</span> page before checking the option.
+							</p>
+							<p class="step-list-item-text-small">
+								HTTPS is a security protocol that all modern sites should have. Learn more about it <a href="https://www.cloudflare.com/learning/ssl/what-is-https/" target="_blank">here</a>.
+							</p>
+						</div>
+					</div>
 				</div>
-
-				<div class="subsection-divider"></div>
-				
-				<div class="subsection" id="why-do-i-have-to-commit-and-push">
-					<h4><a href="#why-do-i-have-to-commit-and-push">6.a. Why do I have to commit AND push?</a></h4>
-					<p>
-						asdf
-					</p>
-				</div>
-			</section>
-
-			<div class="section-divider"></div>
-
-			<section id="deploy-your-repository-on-github-pages" class="section">
-				<div class="section-header">7. Deploy your repository on GitHub pages</div>
-
-				<div class="subsection">
-					<h3><a href="#deploy-your-repository-on-github-pages">7. Deploy your repository on GitHub pages</a></h3>
-					<p>
-						asdf
-					</p>
-					<a href="https://code.visualstudio.com/" target="_blank" class="subsection-button">Click here to sign up on GitHub!</a>
-				</div>
-
-				<div class="subsection-divider"></div>
-				
-				<div class="subsection" id="whats-a-branch-and-why-did-i-have-to-set-it-to-main">
-					<h4><a href="#whats-a-branch-and-why-did-i-have-to-set-it-to-main">7.a. What’s a “branch” and why did I have to set it to “main”?</a></h4>
-					<p>
-						asdf
-					</p>
-				</div>
-
-				<div class="subsection-divider"></div>
-				
-				<div class="subsection" id="help-it-wont-let-me-change-the-branch">
-					<h4><a href="#help-it-wont-let-me-change-the-branch">7.b. Help! It won’t let me change the branch!</a></h4>
-					<p>
-						asdf
-					</p>
-				</div>
-			</section>
-
-			<div class="section-divider"></div>
-
-			<section id="connect-your-website-to-a-custom-url" class="section">
-				<div class="section-header">8. Connect your website to a custom URL</div>
-
-				<div class="subsection">
-					<h3><a href="#connect-your-website-to-a-custom-url">8. Connect your website to a custom URL</a></h3>
-					<p>
-						asdf
-					</p>
-					<a href="https://code.visualstudio.com/" target="_blank" class="subsection-button">Click here to sign up on GitHub!</a>
-				</div>
-
-				<div class="subsection-divider"></div>
-				
-				<div class="subsection" id="how-do-i-add-a-subdomain-to-my-website">
-					<h4><a href="#how-do-i-add-a-subdomain-to-my-website">8.a. How do I add a subdomain to my website?</a></h4>
-					<p>
-						asdf
-					</p>
-				</div>
-			</section>
-		</main>
-	</div>
+			</div>
+		</section>
+	</main>
 
 	<script src="script.js"></script>
 </body>
