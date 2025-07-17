@@ -58,3 +58,15 @@ setInterval(() => {
 		span.style.setProperty('--primary', `var(--${colors[Math.floor(Math.random()*colors.length)]})`);
 	}
 }, 1500)
+
+// Toggle CSS for demonstration purposes
+function toggleCSS() {
+	let css = document.querySelector('#css');
+	if (parseInt(css.dataset.active) == 0) {
+		css.dataset.active = 1;
+		css.href = '/style.css';
+	} else {
+		css.dataset.active = 0;
+		css.href = '';
+	}
+}

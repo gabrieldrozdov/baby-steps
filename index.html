@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Baby Steps</title>
+	<title>Baby Steps, by GD with GD</title>
 
-	<meta name="author" content="GD with GD">
+	<meta name="author" content="Gabriel Drozdov / GD with GD">
 	<meta name="keywords" content="Web Design, Web Development, Creative Coding, Design Education, Code Education, Tutorial, Pedagogy">
 	<meta name="description" content="Guides to get you started coding websites.">
 	<meta property="og:url" content="https://babysteps.gdwithgd.com/">
@@ -13,8 +13,9 @@
 	<meta property="og:description" content="Guides to get you started coding websites.">
 	<meta property="og:image" content="/assets/meta/opengraph.jpg">
 	<link rel="icon" type="png" href="/assets/meta/favicon.png">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👶</text></svg>">
 
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="/style.css" id="css">
 </head>
 <body>
 	<header class="header">
@@ -38,6 +39,7 @@
 		<button class="nav-step" onclick="openStep('#step-6');" style="--primary: var(--red);">6</button>
 		<button class="nav-step" onclick="openStep('#step-7');" style="--primary: var(--pink);">7</button>
 		<button class="nav-step" onclick="openStep('#step-8');" style="--primary: var(--green);">8</button>
+		<button class="nav-step" onclick="openStep('#step-9');" style="--primary: var(--blue);">9</button>
 		<div class="nav-spacer"></div>
 		<button class="nav-toggle" onclick="openAllSteps();">OPEN ALL</button>
 		<button class="nav-toggle" onclick="closeAllSteps();">CLOSE ALL</button>
@@ -52,16 +54,19 @@
 			<div class="step-content">
 				<div class="step-list">
 					<p>
-						To make a website, all you need is a GitHub account, an app to write code with, and a way to upload your code to GitHub.
+						To make a website, all you need is an app to write code with, a GitHub account, and a way to upload your code to GitHub.
 					</p>
 					<div class="step-list-item">
 						<div class="step-list-item-number">1.1</div>
 						<div class="step-list-item-text">
 							<p>
-								Make an account on <a href="https://github.com/" target="_blank">github.com</a>.
+								Download and install the text editor <a href="https://code.visualstudio.com/" target="_blank">Visual Studio (VS) Code</a>.
 							</p>
 							<p class="step-list-item-text-small">
-								If you’re a student, make sure to use your personal email and not a school address.
+								<strong>Mac users:</strong> make sure to drag the downloaded file to your Applications folder, which you can access by pressing <span class="text-highlight">COMMAND+SHIFT+A</span> in any Finder window. Don’t run the application from your Downloads folder!
+							</p>
+							<p class="step-list-item-text-small">
+								A <strong>text editor</strong> is an application that lets you write code. It supports the editing of <strong>plaintext</strong> files, which are special text files that don’t feature the formatting features (like fonts, colors, etc.) of typical documents. We just care about the content of our code, not how it looks, so no matter what <strong>programming language</strong> we’re using we write it as plaintext files.
 							</p>
 						</div>
 					</div>
@@ -69,10 +74,10 @@
 						<div class="step-list-item-number">1.2</div>
 						<div class="step-list-item-text">
 							<p>
-								Download and install the text editor <a href="https://code.visualstudio.com/" target="_blank">Visual Studio (VS) Code</a>.
+								Download and install the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server extension</a>.
 							</p>
 							<p class="step-list-item-text-small">
-								Mac users: drag the downloaded file to your Applications folder, which you can access by pressing <span class="text-highlight">COMMAND+SHIFT+A</span> in any Finder window.
+								We’ll use this extension in <a href="#step-4" onclick="openStep('#step-4')">Step 4</a> to test your website before launching it to the Internet.
 							</p>
 						</div>
 					</div>
@@ -80,10 +85,13 @@
 						<div class="step-list-item-number">1.3</div>
 						<div class="step-list-item-text">
 							<p>
-								Download and install <a href="https://desktop.github.com/download/" target="_blank">GitHub Desktop</a>.
+								Make an account on <a href="https://github.com/" target="_blank">github.com</a>.
 							</p>
 							<p class="step-list-item-text-small">
-								Mac users: drag the downloaded file to your Applications folder, which you can access by pressing <span class="text-highlight">COMMAND+SHIFT+A</span> in any Finder window.
+								You’ll want to keep this account for a long time, so name this account something you’re proud of and use an email you won’t lose access to! If you’re a student, make sure to use your personal email and not a school address.
+							</p>
+							<p class="step-list-item-text-small">
+								<strong>GitHub</strong> is a popular service for code management. It lets you store your code (and other files) online, collaborate with other coders, see older versions of your files, and even launch websites for free.
 							</p>
 						</div>
 					</div>
@@ -91,10 +99,24 @@
 						<div class="step-list-item-number">1.4</div>
 						<div class="step-list-item-text">
 							<p>
+								Download and install <a href="https://desktop.github.com/download/" target="_blank">GitHub Desktop</a>.
+							</p>
+							<p class="step-list-item-text-small">
+								<strong>Mac users:</strong> once again, make sure to drag the downloaded file to your Applications folder, which you can access by pressing <span class="text-highlight">COMMAND+SHIFT+A</span> in any Finder window. Don’t run the application from your Downloads folder!
+							</p>
+							<p class="step-list-item-text-small">
+								<strong>GitHub Desktop</strong> is an application that lets you easily edit the code (and other files) within GitHub <strong>repositories</strong>, which you’ll learn more about in <a href="#step-2" onclick="openStep('#step-2')">Step 2</a>.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">1.5</div>
+						<div class="step-list-item-text">
+							<p>
 								Open GitHub Desktop and do all the setup stuff.
 							</p>
 							<p class="step-list-item-text-small">
-								Log in, fill out all the required info, and leave every setting at its default value.
+								I’m being a little vague because the exact log-in experience changes every now and then. Log in and fill out all the required info. If you encounter any confusing questions, you can leave every setting at its default value.
 							</p>
 						</div>
 					</div>
@@ -109,8 +131,12 @@
 			</h2>
 			<div class="step-content">
 				<p>
-					A GitHub repository is a folder that stores your website’s code and other assets (like images, fonts, etc.).
+					A GitHub repository is a folder that stores your website’s code and other assets (like images, fonts, etc.). There are two methods for creating new repositories: either from the GitHub Desktop app, or from github.com. I’ll explain both methods.
 				</p>
+				<h3>
+					<span class="step-content-subtitle">Method 1</span>
+					<span class="step-content-title">Creating a repository using GitHub Desktop</span>
+				</h3>
 				<div class="step-list">
 					<div class="step-list-item">
 						<div class="step-list-item-number">2.1</div>
@@ -118,13 +144,19 @@
 							<p>
 								Open up GitHub Desktop.
 							</p>
+							<p class="step-list-item-text-small">
+								Mac users: make sure you moved the application into your Applications folder, which you can access by pressing <span class="text-highlight">COMMAND+SHIFT+A</span> in any Finder window.
+							</p>
 						</div>
 					</div>
 					<div class="step-list-item">
 						<div class="step-list-item-number">2.2</div>
 						<div class="step-list-item-text">
 							<p>
-								Open the repository menu in the top-left corner.
+								Click <span class="text-highlight">File</span> from the title bar at the top of your screen and select <span class="text-highlight">New Repository...</span>
+							</p>
+							<p class="step-list-item-text-small">
+								You will probably see other buttons that do the same thing. Whichever button you press, a popup should appear that says <span class="text-highlight">Create a New Repository</span>
 							</p>
 						</div>
 					</div>
@@ -132,7 +164,10 @@
 						<div class="step-list-item-number">2.3</div>
 						<div class="step-list-item-text">
 							<p>
-								Click <span class="text-highlight">Add</span> and then <span class="text-highlight">Create New Repository...</span>
+								Give your repository a name, making sure you only use lowercase letters and hyphens! Avoid uppercase letters, spaces, or other symbols.
+							</p>
+							<p class="step-list-item-text-small">
+								Your repository name will become its URL later on: <span class="text-highlight">[your-github-username].github.io/&#8203;[your-repository-name]</span>. For example, this site’s repository is called <span class="text-highlight">baby-steps</span>
 							</p>
 						</div>
 					</div>
@@ -140,10 +175,10 @@
 						<div class="step-list-item-number">2.4</div>
 						<div class="step-list-item-text">
 							<p>
-								Give your repository a name.
+								Once you’re happy with the name you’ve chosen, leave the rest of the settings at their default values and press <span class="text-highlight">Create Repository</span>.
 							</p>
 							<p class="step-list-item-text-small">
-								Your repository name will become its URL later on: <span class="text-highlight">[your-github-username].github.io/[your-repository-name]</span>. You can leave the rest of the settings at their default values.
+								You have just made a folder on your computer with the same name you inputted into GitHub Desktop. With GitHub Desktop open, click <span class="text-highlight">Repository > Show in Finder (or Explorer)</span> in the title bar at the top of your screen to locate the folder. Alternatively, you can also press <span class="text-highlight">Mac: COMMAND+SHIFT+F</span> or <span class="text-highlight">Windows: CTRL+SHIFT+F</span> as a shortcut. By default, your repository’s folder will be located in <span class="text-highlight">Documents &gt; GitHub &gt; [your-repository]</span>. <strong>Don’t move the repository’s folder once you’ve created it!</strong>
 							</p>
 						</div>
 					</div>
@@ -151,10 +186,7 @@
 						<div class="step-list-item-number">2.5</div>
 						<div class="step-list-item-text">
 							<p>
-								Click <span class="text-highlight">Create Repository</span>
-							</p>
-							<p class="step-list-item-text-small">
-								You have just made a folder on your computer with the same name you inputted into GitHub Desktop. By default, this folder will be located in <span class="text-highlight">Documents &gt; GitHub &gt; [your-repository]</span>. You can also press <span class="text-highlight">Mac: COMMAND+SHIFT+F</span> <span class="text-highlight">Windows: CTRL+SHIFT+F</span> to view the folder. I don’t recommend moving it out of this location.
+								Click <span class="text-highlight">Publish repository</span> at the top of GitHub Desktop. This will open up a popup with the title <span class="text-highlight">Publish Repository</span>
 							</p>
 						</div>
 					</div>
@@ -162,24 +194,95 @@
 						<div class="step-list-item-number">2.6</div>
 						<div class="step-list-item-text">
 							<p>
-								Click <span class="text-highlight">Publish repository</span>
+								Uncheck the <span class="text-highlight">Keep this code private</span> box and keep all other settings at their default values. Then, press <span class="text-highlight">Publish Repository</span>
+							</p>
+							<p class="step-list-item-text-small">
+								Your repository will now be accessible on github.com. With GitHub Desktop open, click <span class="text-highlight">Repository > View on GitHub</span> in the title bar at the top of your screen. Alternatively, can also press <span class="text-highlight">Mac: COMMAND+SHIFT+G</span> or <span class="text-highlight">Windows: CTRL+SHIFT+G</span> as a shortcut.
 							</p>
 						</div>
 					</div>
+				</div>
+				<p class="step-callout">
+					<strong>Did you forget to uncheck the <span class="text-highlight">Keep this code private</span> box when creating your repository?</strong>
+					<span>To fix this, first log into github.com. Open up your repository on github.com (Step 2.6 explains how to get here). Click <span class="text-highlight">Settings</span> at the top of your repository’s page. Scroll to the bottom of the page, and click <span class="text-highlight">Change visibility</span>. Change your repository’s visibility to public and click through all of the (suprisingly scary) screens that GitHub uses to warn you not to do this.</span>
+				</p>
+				<div class="step-divider"></div>
+				<h3>
+					<span class="step-content-subtitle">Method 2</span>
+					<span class="step-content-title">Creating a repository using github.com</span>
+				</h3>
+				<p>
+					If you’ve already followed the previous steps, feel free to skip this. These steps show another way of creating a repository from github.com as opposed to GitHub Desktop.
+				</p>
+				<div class="step-list">
 					<div class="step-list-item">
 						<div class="step-list-item-number">2.7</div>
 						<div class="step-list-item-text">
 							<p>
-								Make sure that <span class="text-highlight">Keep this code private</span> is NOT checked. Then, press <span class="text-highlight">Publish Repository</span>
+								Open <a href="https://github.com/" target="_blank">github.com</a> in your web browser.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">2.8</div>
+						<div class="step-list-item-text">
+							<p>
+								Click your profile picture in the top-right corner and navigate to <span class="text-highlight">Your repositories</span>
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">2.9</div>
+						<div class="step-list-item-text">
+							<p>
+								Click <span class="text-highlight">New</span> to create a new repository. This should take you to the <a href="https://github.com/new" target="_blank">New repository</a> page.
 							</p>
 							<p class="step-list-item-text-small">
-								Your repository will now be accessible on github.com. To find it online, open the menu by clicking your profile picture in the top-right corner and then pressing <span class="text-highlight">Your repositories</span>. You can also press <span class="text-highlight">Mac: COMMAND+SHIFT+G</span> <span class="text-highlight">Windows: CTRL+SHIFT+G</span> to open its affiliated webpage.
+								You may have seen this button in other locations on github.com. As long as you end up at the <a href="https://github.com/new" target="_blank">New repository</a> page, you can proceed.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">2.10</div>
+						<div class="step-list-item-text">
+							<p>
+								Give your repository a name, making sure you only use lowercase letters and hyphens! Avoid uppercase letters, spaces, or other symbols.
+							</p>
+							<p class="step-list-item-text-small">
+								Your repository name will become its URL later on: <span class="text-highlight">[your-github-username].github.io/&#8203;[your-repository-name]</span>. For example, this site’s repository is called <span class="text-highlight">baby-steps</span>
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">2.11</div>
+						<div class="step-list-item-text">
+							<p>
+								Leave the rest of the settings at their default values. Make sure that <span class="text-highlight">Public</span> is selected for your repository’s visibility setting. Press <span class="text-highlight">Create repository</span>.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">2.12</div>
+						<div class="step-list-item-text">
+							<p>
+								On your repository’s page, click <span class="text-highlight">Set up in Desktop</span>. Give your browser permission to open GitHub Desktop if you’re prompted to do so.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">2.13</div>
+						<div class="step-list-item-text">
+							<p>
+								A popup should appear with the title <span class="text-highlight">Clone a Repository</span>. Leave all the settings at their default values and click <span class="text-highlight">Clone</span>
+							</p>
+							<p class="step-list-item-text-small">
+								As an alternative to this and the previous step, open GitHub Desktop and click <span class="text-highlight">File</span> from the title bar at the top of your screen. Then click <span class="text-highlight">Clone Repository...</span> and search for your repository’s name. Select it and press <span class="text-highlight">Clone</span>
 							</p>
 						</div>
 					</div>
 				</div>
 				<p>
-					Alternatively, you can create a repository directly on github.com. If you make your repository online, you’ll need to download it to GitHub Desktop. To do that, click <span class="text-highlight">Clone Repository...</span> in Step 2.3 instead of <span class="text-highlight">Create New Repository...</span>
+					And you’re done! No matter the method you picked, you’ll end up with a repository that’s both live on github.com and downloaded to your computer.
 				</p>
 			</div>
 		</section>
@@ -191,14 +294,14 @@
 			</h2>
 			<div class="step-content">
 				<p>
-					The minimum requirement for making a website is a single HTML file.
+					The smallest website contains a single HTML file. This is a plaintext file with the extension <span class="text-highlight">.html</span>. Let’s make one!
 				</p>
 				<div class="step-list">
 					<div class="step-list-item">
 						<div class="step-list-item-number">3.1</div>
 						<div class="step-list-item-text">
 							<p>
-								Open Visual Studio Code.
+								Open GitHub Desktop.
 							</p>
 						</div>
 					</div>
@@ -206,10 +309,7 @@
 						<div class="step-list-item-number">3.2</div>
 						<div class="step-list-item-text">
 							<p>
-								Go to <span class="text-highlight">File &gt; Open Folder</span> in the menu bar at the top and navigate to the repository you just made.
-							</p>
-							<p class="step-list-item-text-small">
-								It should be in <span class="text-highlight">Documents &gt; GitHub &gt; [your-repository]</span>. Alternatively, you can just drag your folder into the Visual Studio Code icon, or press <span class="text-highlight">Mac: COMMAND+SHIFT+A</span> <span class="text-highlight">Windows: CTRL+SHIFT+A</span> in GitHub Desktop.
+								Make sure your repository is selected from the menu at the top-left corner. If you haven’t created a repository yet, follows the steps from the <a href="#step-2" onclick="openStep('#step-2')">previous section</a>.
 							</p>
 						</div>
 					</div>
@@ -217,10 +317,10 @@
 						<div class="step-list-item-number">3.3</div>
 						<div class="step-list-item-text">
 							<p>
-								Press <span class="text-highlight">Mac: COMMAND+N</span> <span class="text-highlight">Windows: CTRL+N</span> to create a new file.
+								Click <span class="text-highlight">Repository</span> from the title bar at the top of your screen and press <span class="text-highlight">Open in Visual Studio Code</span>
 							</p>
 							<p class="step-list-item-text-small">
-								Alternatively, go to <span class="text-highlight">File &gt; New Text File</span> in the menu bar at the top.
+								Shortcuts: <span class="text-highlight">Mac: COMMAND+SHIFT+A</span> <span class="text-highlight">Windows: CTRL+SHIFT+A</span>
 							</p>
 						</div>
 					</div>
@@ -228,29 +328,21 @@
 						<div class="step-list-item-number">3.4</div>
 						<div class="step-list-item-text">
 							<p>
-								Press <span class="text-highlight">Mac: COMMAND+SHIFT+S</span> <span class="text-highlight">Windows: CTRL+SHIFT+S</span> to save your file. Name it <span class="text-highlight">index.html</span> and save it to your repository.
+								You just opened up your repository in Visual Studio Code. Now, let’s create a new file by clicking <span class="text-highlight">File</span> and then <span class="text-highlight">New Text File</span> in the title bar at the top of your screen.
 							</p>
 							<p class="step-list-item-text-small">
-								Alternatively, go to <span class="text-highlight">File &gt; Save As...</span> in the menu bar at the top.
+								Shortcuts: <span class="text-highlight">Mac: COMMAND+N</span> <span class="text-highlight">Windows: CTRL+N</span>
 							</p>
 						</div>
 					</div>
-				</div>
-				<p class="step-callout">
-					<strong>You HAVE to call your file <span class="text-highlight">index.html</span>. Why?</strong>
-					<span>When you visit a website, all you’re really doing is downloading and viewing some files from another computer (usually located in a <a href="https://en.wikipedia.org/wiki/Server_farm" target="_blank">server farm</a>). For example, <a href="https://github.com/gabrieldrozdov/baby-steps" target="_blank">here is the folder</a> with all the files for <span class="text-highlight">babysteps.gdwithgd.com</span>.</span>
-					<span>By going to <span class="text-highlight">babysteps.gdwithgd.com</span>, you’re actually accessing this folder. Your computer then knows to look for the <span class="text-highlight">index.html</span> file in that folder, which it opens automatically.</span>
-					<span>If you named the file something else, like <span class="text-highlight">homepage.html</span> for example, you would get a <a href="https://en.wikipedia.org/wiki/HTTP_404" target="_blank">404 error</a> visiting <span class="text-highlight">babysteps.gdwithgd.com</span>. Instead, you’d have to go to <span class="text-highlight">babysteps.gdwithgd.com/homepage.html</span>.</span>
-				</p>
-				<div class="step-list">
 					<div class="step-list-item">
 						<div class="step-list-item-number">3.5</div>
 						<div class="step-list-item-text">
 							<p>
-								Type <span class="text-highlight">!</span> into your text file and press <span class="text-highlight">Mac: RETURN</span> <span class="text-highlight">Windows: ENTER</span>. Your file should now contain a template for an HTML document.
+								Save your file by clicking <span class="text-highlight">File</span> and then <span class="text-highlight">Save As...</span> in the title bar at the top of your screen.
 							</p>
 							<p class="step-list-item-text-small">
-								Learn more about what this template means <a href="https://www.freecodecamp.org/news/html-starter-template-a-basic-html5-boilerplate-for-index-html/" target="_blank">here</a>.
+								Shortcuts: <span class="text-highlight">Mac: COMMAND+SHIFT+S</span> <span class="text-highlight">Windows: CTRL+SHIFT+S</span>
 							</p>
 						</div>
 					</div>
@@ -258,7 +350,10 @@
 						<div class="step-list-item-number">3.6</div>
 						<div class="step-list-item-text">
 							<p>
-								In between the <span class="text-highlight">&lt;body&gt;</span> and <span class="text-highlight">&lt;/body&gt;</span> lines of your code, write <span class="text-highlight">Hello world!</span>
+								Name your file <span class="text-highlight">index.html</span> and save it to your repository’s folder (which should be the default location).
+							</p>
+							<p class="step-list-item-text-small">
+								You MUST name your file <span class="text-highlight">index.html</span>. If you named it something else, you can rename it from the sidebar in Visual Studio Code by right-clicking it.
 							</p>
 						</div>
 					</div>
@@ -266,14 +361,46 @@
 						<div class="step-list-item-number">3.7</div>
 						<div class="step-list-item-text">
 							<p>
-								Save your file again by pressing <span class="text-highlight">Mac: COMMAND+S</span> <span class="text-highlight">Windows: CTRL+S</span>
+								While editing your new index.html file, type <span class="text-highlight">!</span> and press <span class="text-highlight">Mac: RETURN</span> or <span class="text-highlight">Windows: ENTER</span> on your keyboard. This will add a HTML template to your document.
 							</p>
 							<p class="step-list-item-text-small">
-								Alternatively, go to <span class="text-highlight">File &gt; Save</span> in the menu bar at the top.
+								Learn more about this template <a href="https://www.freecodecamp.org/news/html-starter-template-a-basic-html5-boilerplate-for-index-html/" target="_blank">here</a>.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">3.8</div>
+						<div class="step-list-item-text">
+							<p>
+								In between the <span class="text-highlight">&lt;body&gt;</span> and <span class="text-highlight">&lt;/body&gt;</span> lines of your code, write <span class="text-highlight">Hello world!</span>
+							</p>
+							<p class="step-list-item-text-small">
+								This section of your HTML file contains all of the visible content on your website.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">3.9</div>
+						<div class="step-list-item-text">
+							<p>
+								Save your file again by <span class="text-highlight">File</span> and then <span class="text-highlight">Save As...</span> in the title bar at the top of your screen.
+							</p>
+							<p class="step-list-item-text-small">
+								Shortcuts: <span class="text-highlight">Mac: COMMAND+S</span> <span class="text-highlight">Windows: CTRL+S</span>
 							</p>
 						</div>
 					</div>
 				</div>
+				<p>
+					And you’re done! You’ve just finished coding the first page of your new website!
+				</p>
+				<p class="step-callout">
+					<strong>You HAVE to call your file <span class="text-highlight">index.html</span>. Why?</strong>
+					<span>When you visit a website, all you’re really doing is downloading and viewing some files from another computer (usually located in a <a href="https://en.wikipedia.org/wiki/Server_farm" target="_blank">server farm</a>). For example, <a href="https://github.com/gabrieldrozdov/baby-steps" target="_blank">here is the folder</a> with all the files for <span class="text-highlight">babysteps.gdwithgd.com</span>.</span>
+					<span>By going to <span class="text-highlight">babysteps.gdwithgd.com</span>, you’re actually accessing this folder. Your computer then knows to look for the <span class="text-highlight">index.html</span> file in that folder, which it opens automatically.</span>
+					<span>If you named the file something else, like <span class="text-highlight">homepage.html</span> for example, you would get a <a href="https://en.wikipedia.org/wiki/HTTP_404" target="_blank">404 error</a> visiting <span class="text-highlight">babysteps.gdwithgd.com</span>. Instead, you’d have to go to <span class="text-highlight">babysteps.gdwithgd.com/&#8203;homepage.html</span>.</span>
+					<span>You can learn more about folder structure and file paths in <a href="#step-7" onclick="openStep('#step-7')">Step 7</a>.</span>
+				</p>
 			</div>
 		</section>
 
@@ -284,7 +411,7 @@
 			</h2>
 			<div class="step-content">
 				<p>
-					Your website doesn’t need to be live on the internet to view it. In this guide, we’ll learn how to preview your site before publishing it online.
+					Your website doesn’t need to be live on the Internet to view it. In this step, we’ll learn how to preview your site before publishing it online.
 				</p>
 				<div class="step-list">
 					<div class="step-list-item">
@@ -294,7 +421,13 @@
 								Make sure your repository is open in Visual Studio Code.
 							</p>
 							<p class="step-list-item-text-small">
-								If it’s not, open Visual Studio Code and go to <span class="text-highlight">File &gt; Open Folder</span> in the menu bar at the top and navigate to your repository. It should be in <span class="text-highlight">Documents &gt; GitHub &gt; [your-repository]</span>. Alternatively, you can just drag your folder into the Visual Studio Code icon, or press <span class="text-highlight">Mac: COMMAND+SHIFT+A</span> <span class="text-highlight">Windows: CTRL+SHIFT+A</span> in GitHub Desktop.
+								If it’s not, follow Steps 3.1–3.3 from the <a href="#step-3" onclick="openStep('#step-3')">previous section</a>.
+							</span>
+							<p class="step-list-item-text-small">
+								Alternatively, open Visual Studio Code and click <span class="text-highlight">File</span> and then <span class="text-highlight">Open Folder...</span> in the title bar at the top of the screen. Your repository should be in <span class="text-highlight">Documents &gt; GitHub &gt; [your-repository-name]</span>. Select this folder and press <span class="text-highlight">Open</span>
+							</p>
+							<p class="step-list-item-text-small">
+								One last method: you can just drag your folder into the Visual Studio Code icon!
 							</p>
 						</div>
 					</div>
@@ -302,7 +435,10 @@
 						<div class="step-list-item-number">4.2</div>
 						<div class="step-list-item-text">
 							<p>
-								Download and install the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server extension</a>.
+								Make sure you’ve already downloaded and installed the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server extension</a>.
+							</p>
+							<p class="step-list-item-text-small">
+								You can tell if the extension is installed if there is a button that says <span class="text-highlight">Go Live</span> at the bottom-right of Visual Studio Code.
 							</p>
 						</div>
 					</div>
@@ -310,10 +446,10 @@
 						<div class="step-list-item-number">4.3</div>
 						<div class="step-list-item-text">
 							<p>
-								Open the <span class="text-highlight">index.html</span> file from your repository in Visual Studio Code.
+								Open the <span class="text-highlight">index.html</span> file from your repository in Visual Studio Code by selecting it from the sidebar. (It’s probably already open!)
 							</p>
 							<p class="step-list-item-text-small">
-								You can select it from the Explorer sidebar. If the sidebar is closed, click the icon in the top-left corner of Visual Studio Code or press <span class="text-highlight">Mac: COMMAND+B</span> <span class="text-highlight">Windows: CTRL+B</span>
+								If the sidebar is closed, click the icon in the top-left corner of Visual Studio Code or press <span class="text-highlight">Mac: COMMAND+SHIFT+E</span> or <span class="text-highlight">Windows: CTRL+SHIFT+E</span>
 							</p>
 						</div>
 					</div>
@@ -334,6 +470,9 @@
 							<p>
 								Now, whenever you make changes to your site and save your file with <span class="text-highlight">Mac: COMMAND+S</span> <span class="text-highlight">Windows: CTRL+S</span>, your in-browser preview will automatically update!
 							</p>
+							<p>
+								If your document contains the “Hello world!” text from the previous section, try editing it and saving your file. Your live preview in your web browser should update automatically.
+							</p>
 							<p class="step-list-item-text-small">
 								You can use <span class="text-highlight">Mac: COMMAND+L+O</span> <span class="text-highlight">Windows: ALT+L+O</span> to preview any .html file you have open in Visual Studio Code.
 							</p>
@@ -341,7 +480,7 @@
 					</div>
 				</div>
 				<p>
-					You can also drag any .html file into a web browser to preview it, but this won’t always provide an accurate preview of how your site will look once it goes live.
+					<strong>A (worse) method:</strong> You can also drag any .html file into a web browser to preview it, but this won’t always provide an accurate preview of how your site will look once it goes live. Always try to test your sites using Live Server before launching them to get the most accurate preview!
 				</p>
 			</div>
 		</section>
@@ -352,12 +491,15 @@
 				<span class="step-title-name">Launch your site on GitHub Pages</span>
 			</h2>
 			<div class="step-content">
+				<p>
+					GitHub Pages is a free service for launching basic websites. You’ll get a unique URL in the format of <span class="text-highlight">[your-github-username].github.io/[your-repository-name]</span>. If you want to <a href="#step-9" onclick="openStep('#step-9')">purchase a custom URL</a> in the future, you can use that too!
+				</p>
 				<div class="step-list">
 					<div class="step-list-item">
 						<div class="step-list-item-number">5.1</div>
 						<div class="step-list-item-text">
 							<p>
-								Open your repository in GitHub Desktop.
+								Open your repository in GitHub Desktop. You should see a list of changed files.
 							</p>
 							<p class="step-list-item-text-small">
 								If your repository isn’t already open, select it from the drop-down menu in the top-left corner.
@@ -368,10 +510,10 @@
 						<div class="step-list-item-number">5.2</div>
 						<div class="step-list-item-text">
 							<p>
-								Fill out the <span class="text-highlight">Summary</span> field with something like “Initial commit” (the exact text doesn’t matter) and press <span class="text-highlight">Commit to main</span>. 
+								In the bottom-left corner, fill out the <span class="text-highlight">Summary</span> field with something like “Initial commit” (the exact text doesn’t matter) and press <span class="text-highlight">Commit to main</span>. 
 							</p>
 							<p class="step-list-item-text-small">
-								You’ve just created a code commit, which is like saving a version of your repository’s files. The <span class="text-highlight">Summary</span> and <span class="text-highlight">Description</span> fields are there to help you keep track of your commits in case you want to roll back to a previous version later on.
+								You’ve just committed your code, which is like saving a version of your repository’s files. The <span class="text-highlight">Summary</span> and <span class="text-highlight">Description</span> fields are there to help you keep track of your commits in case you want to roll back to a previous version later on.
 							</p>
 						</div>
 					</div>
@@ -379,7 +521,7 @@
 						<div class="step-list-item-number">5.3</div>
 						<div class="step-list-item-text">
 							<p>
-								Click <span class="text-highlight">Push origin</span>.
+								Click <span class="text-highlight">Push origin</span> in the top-right corner.
 							</p>
 							<p class="step-list-item-text-small">
 								Pushing your code uploads the most recent commit to your public repository on github.com.
@@ -390,27 +532,38 @@
 						<strong>Did you get an error?</strong>
 						<span>Sometimes, you might encounter the following error when pushing your repository: <span class="text-highlight">The remote disconnected. Check your Internet connection and try again.</span></span>
 						<span>To fix this error, do the following:</span>
-						<span><strong>i.</strong> Open the Terminal application on your Mac.</span>
-						<span><strong>ii.</strong> Type <span class="text-highlight">git --version</span> and press enter to make sure you have Git installed. If it isn’t installed, you’ll be prompted to install it.</span>
-						<span><strong>iii.</strong> Once Git is installed, type <span class="text-highlight">git config --global http.postBuffer 157286400</span>.</span>
+						<span><strong>i.</strong> Open the Terminal application, which should already be installed on your computer (<a href="https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac" target="_blank">Mac users</a> / <a href="https://apps.microsoft.com/detail/9n0dx20hk701?hl=en-US&gl=US" target="_blank">Windows users</a>)</span>
+						<span><strong>ii.</strong> Type <span class="text-highlight">git --version</span> and press enter to make sure you have Git installed. If it isn’t installed, you’ll be prompted to install it. If you aren’t given the option, you can install Git from <a href="https://git-scm.com/downloads" target="_blank">here</a>.</span>
+						<span><strong>iii.</strong> Once Git is installed, type <span class="text-highlight">git config --global http.postBuffer 157286400</span> in your Terminal and press enter.</span>
 						<span>And that’s it! You should be able to push your repository now using GitHub Desktop.</span>
 					</p>
 					<div class="step-list-item">
 						<div class="step-list-item-number">5.4</div>
 						<div class="step-list-item-text">
 							<p>
-								Navigate to your repository on github.com by pressing <span class="text-highlight">Mac: COMMAND+SHIFT+G</span> <span class="text-highlight">Windows: CTRL+SHIFT+G</span> in GitHub Desktop.
+								We’re going to make sure your code uploaded by heading over to your repository on github.com. An easy way to do this is through GitHub Desktop. With the GitHub Desktop open, click <span>Repository</span> and then <span>View on GitHub</span> from the title bar at the top of your screen.
 							</p>
 							<p class="step-list-item-text-small">
-								You can also do this by going to github.com, clicking your profile picture to open the menu, and then going to Your repositories.
+								Shortcuts: <span class="text-highlight">Mac: COMMAND+SHIFT+G</span> <span class="text-highlight">Windows: CTRL+SHIFT+G</span>
+							</p>
+							<p class="step-list-item-text-small">
+								You can also do this by going to github.com, clicking your profile picture in the top-right corner to open the menu, going to <span class="text-highlight">Your repositories</span>, and selecting your repository from the list.
 							</p>
 						</div>
 					</div>
+				</div>
+				<p>
+					You should now be on your repository’s page on github.com. On this page, you can see the file(s) you just pushed via GitHub Desktop. Up next, we’re going to launch your site!
+				</p>
+				<div class="step-list">
 					<div class="step-list-item">
 						<div class="step-list-item-number">5.5</div>
 						<div class="step-list-item-text">
 							<p>
-								In the menu at the top, go to <span class="text-highlight">Settings</span>. From there, click <span class="text-highlight">Pages</span> from the sidebar.
+								Start from your repository’s github.com page. In the menu at the top, click <span class="text-highlight">Settings</span>. From there, click <span class="text-highlight">Pages</span> in the sidebar.
+							</p>
+							<p class="step-list-item-text-small">
+								If you’re not seeing <span class="text-highlight">Settings</span>, you are probably not logged into your GitHub account!
 							</p>
 						</div>
 					</div>
@@ -425,11 +578,16 @@
 							</p>
 						</div>
 					</div>
+					<p class="step-callout">
+						<strong>Help, I’m not seeing the options to launch my site!</strong>
+						<span>This probably means your repository is set to private. To fix this, stay on the <span class="text-highlight">Settings</span> page and click the <span class="text-highlight">General</span> from the sidebar. Scroll to the bottom and click <span class="text-highlight">Change visibility</span>. Change your repository’s visibility to public and click through all of the (suprisingly scary) screens that GitHub uses to warn you not to do this.</span>
+						<span>Once you’ve finished this, try Step 5.6 again to see if the option is working now!</span>
+					</p>
 					<div class="step-list-item">
 						<div class="step-list-item-number">5.7</div>
 						<div class="step-list-item-text">
 							<p>
-								After around a minute, your site should be live! Its URL will be <span class="text-highlight">[your-github-username].github.io/[your-repository-name]</span>
+								And you’re done! After around a minute, your site should be live at the URL <span class="text-highlight">[your-github-username].github.io/&#8203;[your-repository-name]</span>
 							</p>
 							<p class="step-list-item-text-small">
 								To check on the status of your site, go to the <span class="text-highlight">Actions</span> tab in the menu at the top. There should be workflow running to deploy your website. Once it’s finished, you’ll find a link to your site’s URL back in the <span class="text-highlight">Settings &gt; Pages</span> menu.
@@ -446,173 +604,40 @@
 		<section class="step" id="step-6" data-active="0" style="--primary: var(--red);">
 			<h2 class="step-title">
 				<span class="step-title-number">6</span>
-				<span class="step-title-name">Add more pages to your site</span>
+				<span class="step-title-name">Make changes to your site</span>
 			</h2>
 			<div class="step-content">
 				<p>
-					Every page on your site is a .html file. If you have a single-page website, you have at least one file: the <span class="text-highlight">index.html</span> file we made in <a href="#step-3" onclick="openStep('#step-3')">Step 3</a>.
+					If you’ve followed Steps 1–5, then your site is a single page with one line of text: “Hello world!” From this point on, your site can become anything you want it to be.
 				</p>
 				<p>
-					To add more pages, we’re going to add more folders to our repository, each with its own <span class="text-highlight">index.html</span> file.
+					So far, you’ve written code using the programming language HTML. There are three programming languages that websites use:
+				</p>
+				<ul>
+					<li><strong>HTML (Hypertext Markup Language)</strong> for organizing content, like text and media files (images, videos, sound, etc.). This is the only programming language that websites require.</li>
+					<li><strong>CSS (Cascading Style Sheet)</strong> for designing that content. Basically every website uses CSS in some capacity, otherwise it’ll look like <a href="https://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">this</a>.</li>
+					<li><strong>JS (JavaScript)</strong> for adding deeper functionality to that content. This is the most advanced of the languages and is not necessary for most basic websites. (But it can be super fun!)</li>
+				</ul>
+				<p>
+					I’d recommend learning these languages in order, starting with HTML and CSS and then only proceeding to JavaScript once you feel confident in the first two. If you don’t know where to start, head over to <a href="https://cheatsheet.gdwithgd.com/" target="_blank">Cheatsheet</a> for a big list of things worth learning (at your own pace)!
 				</p>
 				<p>
-					Here’s an example of the folder structure for a website with a few pages:
-				</p>
-				<div class="folder" style="--primary: var(--pink);">
-					<div class="folder-name">[your-repository-name]</div>
-					<div class="folder-files">
-						<div class="folder-file">index.html</div>
-					</div>
-					<div class="folder" style="--primary: var(--green);">
-						<div class="folder-name">about</div>
-						<div class="folder-files">
-							<div class="folder-file">index.html</div>
-						</div>
-					</div>
-					<div class="folder" style="--primary: var(--green);">
-						<div class="folder-name">projects</div>
-						<div class="folder-files">
-							<div class="folder-file">index.html</div>
-						</div>
-						<div class="folder-break"></div>
-						<div class="folder" style="--primary: var(--blue);">
-							<div class="folder-name">project-1</div>
-							<div class="folder-files">
-								<div class="folder-file">index.html</div>
-							</div>
-						</div>
-						<div class="folder-break"></div>
-						<div class="folder" style="--primary: var(--blue);">
-							<div class="folder-name">project-2</div>
-							<div class="folder-files">
-								<div class="folder-file">index.html</div>
-							</div>
-						</div>
-						<div class="folder-break"></div>
-						<div class="folder" style="--primary: var(--blue);">
-							<div class="folder-name">project-3</div>
-							<div class="folder-files">
-								<div class="folder-file">index.html</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<p>
-					What does that all add up to? Let’s see the URLs that would correspond to each folder.
-				</p>
-				<div class="folder" style="--primary: var(--pink);">
-					<div class="folder-name">[your-repository-name]</div>
-					<div class="folder-files">
-						<div class="folder-file">[your-site].com</div>
-					</div>
-					<div class="folder" style="--primary: var(--green);">
-						<div class="folder-name">about</div>
-						<div class="folder-files">
-							<div class="folder-file">[your-site].com/about/</div>
-						</div>
-					</div>
-					<div class="folder" style="--primary: var(--green);">
-						<div class="folder-name">projects</div>
-						<div class="folder-files">
-							<div class="folder-file">[your-site].com/projects/</div>
-						</div>
-						<div class="folder-break"></div>
-						<div class="folder" style="--primary: var(--blue);">
-							<div class="folder-name">project-1</div>
-							<div class="folder-files">
-								<div class="folder-file">[your-site].com/projects/project-1/</div>
-							</div>
-						</div>
-						<div class="folder-break"></div>
-						<div class="folder" style="--primary: var(--blue);">
-							<div class="folder-name">project-2</div>
-							<div class="folder-files">
-								<div class="folder-file">[your-site].com/projects/project-2/</div>
-							</div>
-						</div>
-						<div class="folder-break"></div>
-						<div class="folder" style="--primary: var(--blue);">
-							<div class="folder-name">project-3</div>
-							<div class="folder-files">
-								<div class="folder-file">[your-site].com/projects/project-3/</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<p>
-					We can link between folders using the <span class="text-highlight">&lt;a&gt;</span> HTML element. This element lets you link to other websites or between pages on a single site.
-				</p>
-				<p class="step-callout">
-					<strong>Confused? Let’s try out a demo site!</strong>
-					<span><a href="/assets/demos/multi-page-website.zip">Click here</a> to download the code for a website with multiple pages. Unzip this folder and open it in Visual Studio Code. Then start Live Server to see how the navigation works between pages.</span>
-					<span>One warning: dragging these files into your web browser to test them directly won’t work in this case. Live Server is required for testing proper links.</span>
-					<span>If you’ve done everything right, the demo should look like <a href="/assets/demos/multi-page-website/" target="_blank">this</a>.</span>
-				</p>
-				<p>
-					Let’s summarize how to make a multi-page website:
+					Whenever you make changes to your code on your computer, you’ll need to push your updates to the live site using GitHub Desktop again. Let’s learn how to do that!
 				</p>
 				<div class="step-list">
 					<div class="step-list-item">
 						<div class="step-list-item-number">6.1</div>
 						<div class="step-list-item-text">
 							<p>
-								For each page on your website, create a subfolder.
+								Make changes to your site’s code or files!
 							</p>
 							<p class="step-list-item-text-small">
-								You can set up a URL structure by putting subfolders in subfolders. For example, by making a <span class="text-highlight">projects</span> folder with a subfolder <span class="text-highlight">project-1</span>, your URL will be <span class="text-highlight">[your-site].com/projects/project-1</span>.
+								If you’re following this tutorial for the first time, I’d recommend just editing the “Hello world!” text from before. Don’t forget to save your changes!
 							</p>
 						</div>
 					</div>
 					<div class="step-list-item">
 						<div class="step-list-item-number">6.2</div>
-						<div class="step-list-item-text">
-							<p>
-								Create an <span class="text-highlight">index.html</span> in each of the subfolders you just created.
-							</p>
-						</div>
-					</div>
-					<div class="step-list-item">
-						<div class="step-list-item-number">6.3</div>
-						<div class="step-list-item-text">
-							<p>
-								To link to a subfolder, create an HTML element using the following format: <span class="text-highlight">&lt;a href="[folder-name]/"&gt;I’m a link!&lt;a&gt;</span>
-							</p>
-							<p class="step-list-item-text-small">
-								You can do the same thing to link to multiple nested subfolders: <span class="text-highlight">&lt;a href="[folder-1-name]/[folder-2-name]/"&gt;I’m a link!&lt;a&gt;</span>
-							</p>
-						</div>
-					</div>
-					<div class="step-list-item">
-						<div class="step-list-item-number">6.4</div>
-						<div class="step-list-item-text">
-							<p>
-								To link to a parent folder, create an HTML element using the following format: <span class="text-highlight">&lt;a href="../"&gt;I’m a link!&lt;a&gt;</span>
-							</p>
-							<p class="step-list-item-text-small">
-								You can do the same thing to link to multiple parent folders: <span class="text-highlight">&lt;a href="../../"&gt;I’m a link!&lt;a&gt;</span>.
-								If you want to navigate to a parent and then another subfolder, you can combine the previous two steps: <span class="text-highlight">&lt;a href="../[parent-subfolder-name]/"&gt;I’m a link!&lt;a&gt;</span>
-							</p>
-						</div>
-					</div>
-				</div>
-				<p class="step-callout">
-					<strong>OK, I lied a little bit.</strong>
-					<span>Technically, you can name .html files whatever you want and link to them directly. However, then you will end up with .html at the end of your URL.</span>
-					<span>For example, we can have a file called <span class="text-highlight">cool-page.html</span>. We can then link to that file with <span class="text-highlight">&lt;a href="cool-page.html"&gt;Go to a cool page!&lt;a&gt;</span></span>
-					<span>You’re likely to encounter situations in the real world where organizations have multiple .html files in one folder. <a href="https://www.nytimes.com/2024/08/27/arts/music/oasis-reunion-tour.html" target="_blank">Here’s an example from The New York Times</a>, which we can tell uses the folder structure <span class="text-highlight">2024/08/27/arts/music/</span> from the URL structure.</span>
-				</p>
-			</div>
-		</section>
-
-		<section class="step" id="step-7" data-active="0" style="--primary: var(--pink);">
-			<h2 class="step-title">
-				<span class="step-title-number">7</span>
-				<span class="step-title-name">Update your live site</span>
-			</h2>
-			<div class="step-content">
-				<div class="step-list">
-					<div class="step-list-item">
-						<div class="step-list-item-number">7.1</div>
 						<div class="step-list-item-text">
 							<p>
 								Open your repository in GitHub Desktop.
@@ -623,18 +648,24 @@
 						</div>
 					</div>
 					<div class="step-list-item">
-						<div class="step-list-item-number">7.2</div>
+						<div class="step-list-item-number">6.3</div>
 						<div class="step-list-item-text">
 							<p>
 								Fill out the <span class="text-highlight">Summary</span> field with something that describes what you changed (the exact text doesn’t matter) and press <span class="text-highlight">Commit to main</span>
 							</p>
+							<p class="step-list-item-text-small">
+								If you’re not seeing this option, this means you didn’t change any of the files since you launched your site, or you forgot to save your changes in Visual Studio Code.
+							</p>
+							<p class="step-list-item-text-small">
+								Committing your code is like saving a version of your repository’s files. The <span class="text-highlight">Summary</span> and <span class="text-highlight">Description</span> fields are there to help you keep track of your commits in case you want to roll back to a previous version later on.
+							</p>
 						</div>
 					</div>
 					<div class="step-list-item">
-						<div class="step-list-item-number">7.3</div>
+						<div class="step-list-item-number">6.4</div>
 						<div class="step-list-item-text">
 							<p>
-								Click <span class="text-highlight">Push origin</span>
+								Click <span class="text-highlight">Push origin</span> in the top-right corner.
 							</p>
 						</div>
 					</div>
@@ -643,13 +674,413 @@
 					<strong>Did you get an error?</strong>
 					<span>Sometimes, you might encounter the following error when pushing your repository: <span class="text-highlight">The remote disconnected. Check your Internet connection and try again.</span></span>
 					<span>To fix this error, do the following:</span>
-					<span><strong>i.</strong> Open the Terminal application on your Mac.</span>
-					<span><strong>ii.</strong> Type <span class="text-highlight">git --version</span> and press enter to make sure you have Git installed. If it isn’t installed, you’ll be prompted to install it.</span>
-					<span><strong>iii.</strong> Once Git is installed, type <span class="text-highlight">git config --global http.postBuffer 157286400</span>.</span>
+					<span><strong>i.</strong> Open the Terminal application, which should already be installed on your computer (<a href="https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac" target="_blank">Mac users</a> / <a href="https://apps.microsoft.com/detail/9n0dx20hk701?hl=en-US&gl=US" target="_blank">Windows users</a>)</span>
+					<span><strong>ii.</strong> Type <span class="text-highlight">git --version</span> and press enter to make sure you have Git installed. If it isn’t installed, you’ll be prompted to install it. If you aren’t given the option, you can install Git from <a href="https://git-scm.com/downloads" target="_blank">here</a>.</span>
+					<span><strong>iii.</strong> Once Git is installed, type <span class="text-highlight">git config --global http.postBuffer 157286400</span> in your Terminal and press enter.</span>
 					<span>And that’s it! You should be able to push your repository now using GitHub Desktop.</span>
 				</p>
 				<p>
-					That’s it! Once your site is live, it will automatically updates after a few minutes every time you push your commits. Make sure you push your code, because just creating commits won’t update your live site.
+					That’s it! There’s no other setup required since you already launched your site on GitHub Pages. Every time you push your code, your site will automatically update after a minute or so. The bigger the files on your site, the longer it’ll take to update.
+				</p>
+			</div>
+		</section>
+
+		<section class="step" id="step-7" data-active="0" style="--primary: var(--pink);">
+			<h2 class="step-title">
+				<span class="step-title-number">7</span>
+				<span class="step-title-name">Add more pages to your site</span>
+			</h2>
+			<div class="step-content">
+				<p>
+					This section is a little harder to explain, so I’ve split up into two parts:
+				</p>
+				<ul>
+					<li>Creating new pages</li>
+					<li>Adding links to navigate between each page</li>
+				</ul>
+				<p>
+					I’ve also created another website, <a href="https://pathfinder.gdwithgd.com/" target="_blank">Pathfinder</a>, to help demonstrate how a website’s folder structure and links work! Pathfinder also contains a <a href="https://pathfinder.gdwithgd.com/site-template.zip">template</a> you can download for a multi-page website.
+				</p>
+				<div class="step-divider"></div>
+				<h3>
+					<span class="step-content-subtitle">Part 1</span>
+					<span class="step-content-title">Creating new pages</span>
+				</h3>
+				<p>
+					Every page on your site is an HTML (i.e. <span class="text-highlight">.html</span>) file. If you’ve followed Steps 1–6, you should have a single HTML file called <span class="text-highlight">index.html</span>, which is your site’s homepage.
+				</p>
+				<p>
+					We can visualize this using a <strong>file tree</strong> diagram. This shows the structure of folders and files within your repository.  Let’s assume your GitHub username is <span class="text-highlight">kiki</span> and your repository name is <span class="text-highlight">bouba</span>, so that your site’s live URL is <span class="text-highlight">kiki.github.io/bouba/</span>. Here is the current file tree for your single-page website:
+				</p>
+				<pre class="tree">📁 bouba/
+│
+└── 📄 index.html</pre>
+				<p>
+					The general rule is that every page on your site requires its own HTML file. If we wanted to add more pages, your file tree might look like this:
+				</p>
+<pre class="tree">📁 bouba/
+│
+├── 📄 index.html
+│
+├── 📄 about.html
+│
+├── 📄 projects.html
+│
+├── 📄 branding.html
+│
+├── 📄 motion.html
+│
+└── 📄 websites.html</pre>
+				<p>
+					While this will technically work, it isn’t great. Organizing your site’s files this way will result in the following URLs:
+				</p>
+				<ul>
+					<li><span class="text-highlight">kiki.github.io/bouba/</span> (the homepage, which uses your index.html file)</li>
+					<li><span class="text-highlight">kiki.github.io/bouba/about.html</span></li>
+					<li><span class="text-highlight">kiki.github.io/bouba/projects.html</span></li>
+					<li><span class="text-highlight">kiki.github.io/bouba/branding.html</span></li>
+					<li><span class="text-highlight">kiki.github.io/bouba/motion.html</span></li>
+					<li><span class="text-highlight">kiki.github.io/bouba/websites.html</span></li>
+				</ul>
+				<p>
+					First of all, these URLs are ugly! The average person doesn’t know what an HTML file is, so why do the names have .html in them? And what is the structure of this website? Is the “motion” page a subpage of the “projects” page, or is it a standalone page?
+				</p>
+				<p>
+					Instead, we’d rather have the following URLs for our site:
+				</p>
+				<ul>
+					<li><span class="text-highlight">kiki.github.io/bouba/</span></li>
+					<li><span class="text-highlight">kiki.github.io/bouba/about/</span></li>
+					<li><span class="text-highlight">kiki.github.io/bouba/projects/</span></li>
+					<li><span class="text-highlight">kiki.github.io/bouba/projects/branding/</span></li>
+					<li><span class="text-highlight">kiki.github.io/bouba/projects/motion/</span></li>
+					<li><span class="text-highlight">kiki.github.io/bouba/projects/websites/</span></li>
+				</ul>
+				<p>
+					Much better! Now, someone visiting your site won’t get confused about the .html portion of the URL, and they can easily tell where they are on the site based on the URL’s structure. To achieve this URL structure, we’ll need to update our file tree:
+				</p>
+<pre class="tree">📁 bouba/
+│
+├── 📄 index.html
+│
+├── 📁 about/
+│   │
+│   └── 📄 index.html
+│
+└── 📁 projects/
+    │
+    ├── 📁 branding/
+    │   │
+    │   └── 📄 index.html
+    │
+    ├── 📁 motion/
+    │   │
+    │   └── 📄 index.html
+    │
+    └── 📁 websites/
+        │
+        └── 📄 index.html</pre>
+				<p>
+					Instead of giving our HTML files unique names, we create several folders in our repository with unique names. Then, we create an <span class="text-highlight">index.html</span> file within each folder. The good news is that when you have multiple files with the same name open in Visual Studio Code, it will label which folder they’re in. That way, you can make sure you’re editing the correct file!
+				</p>
+				<p>
+					Feeling confused? Check out <a href="https://pathfinder.gdwithgd.com/" target="_blank">Pathfinder</a> to see a more in-depth example of how this folder structure works on a live website!
+				</p>
+				<p>
+					Here’s how to add folders and additional <span class="text-highlight">index.html</span> files to your repository:
+				</p>
+				<div class="step-list">
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.1</div>
+						<div class="step-list-item-text">
+							<p>
+								Start by opening GitHub Desktop. If your repository isn’t already selected, then select it from the menu in the top-left corner.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.2</div>
+						<div class="step-list-item-text">
+							<p>
+								Open your repository’s folder by clicking <span class="text-highlight">File</span> and then <span class="text-highlight">New Text File</span> in the title bar at the top of your screen.
+							</p>
+							<p class="step-list-item-text-small">
+								Shortcut: <span class="text-highlight">Mac: SHIFT+COMMAND+F</span> <span class="text-highlight">Windows: SHIFT+CTRL+F</span>. Alternatively, you can navigate to your repository’s folder manually.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.3</div>
+						<div class="step-list-item-text">
+							<p>
+								In this folder, create folders to represent every page you want to have on your website. You may want to create subfolders if you want multiple pages with a common parent.
+							</p>
+							<p class="step-list-item-text-small">
+								Folder names should be all lowercase with no spaces or punctuation except for hyphens. For example, if you wanted a folder with the name “Gabriel's Cool Website", you’d have to call the folder <span class="text-highlight">gabriels-cool-website</span>
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.4</div>
+						<div class="step-list-item-text">
+							<p>
+								Open your repository in Visual Studio Code. If you can’t remember how to do this, refer back to <a href="#step-3" onclick="openStep('#step-3')">Step 3</a>.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.5</div>
+						<div class="step-list-item-text">
+							<p>
+								Create a new file by clicking <span class="text-highlight">File</span> and then <span class="text-highlight">New Text File</span> in the title bar at the top of your screen.
+							</p>
+							<p class="step-list-item-text-small">
+								Shortcuts: <span class="text-highlight">Mac: COMMAND+N</span> <span class="text-highlight">Windows: CTRL+N</span>
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.6</div>
+						<div class="step-list-item-text">
+							<p>
+								Save your file by clicking <span class="text-highlight">File</span> and then <span class="text-highlight">Save As...</span> in the title bar at the top of your screen.
+							</p>
+							<p>
+								Name your file <span class="text-highlight">index.html</span>. Save it to one of your new folders in your repository.
+							</p>
+							<p class="step-list-item-text-small">
+								Shortcuts: <span class="text-highlight">Mac: COMMAND+SHIFT+S</span> <span class="text-highlight">Windows: CTRL+SHIFT+S</span>
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.7</div>
+						<div class="step-list-item-text">
+							<p>
+								In your new HTML file, type <span class="text-highlight">!</span> and press <span class="text-highlight">Mac: RETURN</span> or <span class="text-highlight">Windows: ENTER</span> to add the HTML template to your file.
+							</p>
+							<p>
+								Inside the <span class="text-highlight">&lt;body&gt;&lt;/body&gt;</span> section of this file, type something in like “Welcome to the About page!” and <strong>save</strong> your file. You just want some visible text in your file so that you can tell which page you are on.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.8</div>
+						<div class="step-list-item-text">
+							<p>
+								Repeat Steps 7.5–7.7 until you have an <span class="text-highlight">index.html</span> file in each one of your repository’s subfolders.
+							</p>
+						</div>
+					</div>
+				</div>
+				<p>
+					And you’re done! As a reminder, your file tree should look something like this:
+				</p>
+<pre class="tree">📁 bouba/
+│
+├── 📄 index.html
+│
+├── 📁 about/
+│   │
+│   └── 📄 index.html
+│
+└── 📁 projects/
+    │
+    ├── 📁 branding/
+    │   │
+    │   └── 📄 index.html
+    │
+    ├── 📁 motion/
+    │   │
+    │   └── 📄 index.html
+    │
+    └── 📁 websites/
+        │
+        └── 📄 index.html</pre>
+				<div class="step-divider"></div>
+				<h3>
+					<span class="step-content-subtitle">Part 2</span>
+					<span class="step-content-title">Adding links to navigate between each page</span>
+				</h3>
+				<p>
+					HTML code uses things called <strong>elements</strong> to break up the content of your website. A common HTML element is the link element, which looks like this:
+				</p>
+				<p>
+					<span class="text-highlight"><span style="color: var(--pink);">&lt;a <span style="color: var(--green);">href="</span><span style="color: var(--blue);">example.com</span><span style="color: var(--green);">"</span>&gt;</span><span style="color: var(--yellow);">Click me!</span><span style="color: var(--purple);">&lt;/a&gt;</span></span>
+				</p>
+				<p>
+					I color-coded the element so that we can break down it’s structure:
+				</p>
+				<ul>
+					<li><strong style="color: var(--pink);">Pink:</strong> the opening tag, which marks the start of the element and contains additional information about it.</li>
+					<li><strong style="color: var(--green);">Green:</strong> an attribute, which in this case is the URL you want your link to go to.</li>
+					<li><strong style="color: var(--blue);">Blue:</strong> the actual URL itself, inside of the attribute.</li>
+					<li><strong style="color: var(--yellow);">Yellow:</strong> the element’s visible text when you preview your site.</li>
+					<li><strong style="color: var(--purple);">Purple:</strong> the closing tag, which marks the end of the element.</li>
+				</ul>
+				<p>
+					Link elements let us adds links between the pages on our site. In this example, the link goes to <span class="text-highlight">example.com</span>. What if we want the link to go to another page on the site we’re testing, which isn’t live yet?
+				</p>
+				<p>
+					To do that, we’ll use the <strong>relative file path</strong> from your current page to the next page. Let’s take a look at our site’s file tree again:
+				</p>
+<pre class="tree">📁 bouba/
+│
+├── 📄 index.html
+│
+├── 📁 about/
+│   │
+│   └── 📄 index.html
+│
+└── 📁 projects/
+    │
+    ├── 📁 branding/
+    │   │
+    │   └── 📄 index.html
+    │
+    ├── 📁 motion/
+    │   │
+    │   └── 📄 index.html
+    │
+    └── 📁 websites/
+        │
+        └── 📄 index.html</pre>
+				<p>
+					We want to link to the <strong>folder</strong> that represents the page we want to go to, not the index.html file. Let’s see all the file paths for each page of our site if we start from the homepage.
+				</p>
+<pre class="tree">📁 ./ <strong class="text-highlight">this indicates your current folder</strong>
+│
+├── 📁 about/
+│
+└── 📁 projects/
+    │
+    ├── 📁 projects/branding/
+    │
+    ├── 📁 projects/motion/
+    │
+    └── 📁 projects/websites/</pre>
+				<p>
+					If we wan to link to the “About” page, we could then create a link element with the following URL:
+				</p>
+				<p>
+					<span class="text-highlight"><span style="color: var(--pink);">&lt;a <span style="color: var(--green);">href="</span><span style="color: var(--blue);">about/</span><span style="color: var(--green);">"</span>&gt;</span><span style="color: var(--yellow);">Click me!</span><span style="color: var(--purple);">&lt;/a&gt;</span></span>
+				</p>
+				<p>
+					Let’s revisit our file tree. This time, we’ll assume we’re starting from the “About” page:
+				</p>
+<pre class="tree">📁 ../
+│
+├── 📁 ./ <strong class="text-highlight">you are here</strong>
+│
+└── 📁 ../projects/
+    │
+    ├── 📁 ../projects/branding/
+    │
+    ├── 📁 ../projects/motion/
+    │
+    └── 📁 ../projects/websites/</pre>
+				<p>
+					Our file paths are a little more complicated now because we’re starting from inside a subfolder. We need to go up one level to the parent folder using the notation <strong class="text-highlight">../</strong> and then we can head back down into other subfolders. For example, if we wanted to go to the “Websites” page, our link would look like this:
+				</p>
+				<p>
+					<span class="text-highlight"><span style="color: var(--pink);">&lt;a <span style="color: var(--green);">href="</span><span style="color: var(--blue);">../projects/websites/</span><span style="color: var(--green);">"</span>&gt;</span><span style="color: var(--yellow);">Click me!</span><span style="color: var(--purple);">&lt;/a&gt;</span></span>
+				</p>
+				<p>
+					Let’s revisit our file tree one more time, this time assuming we’re starting from the “Websites” page:
+				</p>
+<pre class="tree">📁 ../../
+│
+├── 📁 ../../about
+│
+└── 📁 ../projects/
+    │
+    ├── 📁 ../branding/
+    │
+    ├── 📁 ../motion/
+    │
+    └── 📁 ./ <strong class="text-highlight">you are here</strong></pre>
+				<p>
+					Now, some pages are two folders up from where we are. So, we have to write <strong class="text-highlight">../</strong> twice. If we want to go back to the homepage from here, our link will look like this:
+				</p>
+				<p>
+					<span class="text-highlight"><span style="color: var(--pink);">&lt;a <span style="color: var(--green);">href="</span><span style="color: var(--blue);">../../</span><span style="color: var(--green);">"</span>&gt;</span><span style="color: var(--yellow);">Click me!</span><span style="color: var(--purple);">&lt;/a&gt;</span></span>
+				</p>
+				<p>
+					Feeling confused? Check out <a href="https://pathfinder.gdwithgd.com/" target="_blank">Pathfinder</a> to see a more in-depth example of how these file paths work on a live website!
+				</p>
+				<p>
+					To summarize, here’s how you add links between pages on your site:
+				</p>
+				<div class="step-list">
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.9</div>
+						<div class="step-list-item-text">
+							<p>
+								If you haven’t already, create more pages on your site by following Steps 7.1–7.8.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.10</div>
+						<div class="step-list-item-text">
+							<p>
+								Open one of your page’s <span class="text-highlight">index.html</span> files in Visual Studio Code.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.11</div>
+						<div class="step-list-item-text">
+							<p>
+								Determine the relative file path from your current page to the page you want to go to.
+							</p>
+							<p>
+								To go up to a parent folder, write <span class="text-highlight">../</span> as many times in a row as you need. To go down to a subfolder, write the full path of folder names, each folled by a <span class="text-highlight">/</span> symbol.
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.12</div>
+						<div class="step-list-item-text">
+							<p>
+								Inside the <span class="text-highlight">&lt;body&gt;&lt;/body&gt;</span> element of your page, add a link element to the page you want to go to. Your link should look something like the following:
+							</p>
+							<p>
+								<span class="text-highlight"><span style="color: var(--pink);">&lt;a <span style="color: var(--green);">href="</span><span style="color: var(--blue);">../folder-name-1/folder-name-2/</span><span style="color: var(--green);">"</span>&gt;</span><span style="color: var(--yellow);">Click me!</span><span style="color: var(--purple);">&lt;/a&gt;</span></span>
+							</p>
+							<ul>
+								<li><strong style="color: var(--pink);">Pink:</strong> opening tag</li>
+								<li><strong style="color: var(--green);">Green:</strong> refrence attribute</li>
+								<li><strong style="color: var(--blue);">Blue:</strong> relative path to the page you want to navigate to</li>
+								<li><strong style="color: var(--yellow);">Yellow:</strong> visible text that gets displayed when you preview your site</li>
+								<li><strong style="color: var(--purple);">Purple:</strong> closing tag</li>
+							</ul>
+							<p>
+								Don’t forget to save your files after you’ve edited them!
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">7.13</div>
+						<div class="step-list-item-text">
+							<p>
+								Test your site! If you don’t remember how to do this, review <a href="#step-4" onclick="openStep('#step-4')">Step 4</a>.
+							</p>
+							<p class="step-list-item-text-small">
+								<strong>One small warning:</strong> you have to use the Live Server extension for your links to work correctly! If you’re testing your pages by just dragging the HTML files into your web browser, your links will not work as intended. Instead, they’ll open up a screen that shows you all the files in the folder you’re linking to.
+							</p>
+						</div>
+					</div>
+				</div>
+				<p>
+					And you’re done! You’ve learned how to add more pages to your site, as well as how to link between the pages on your site. Once you’re ready, follow <a href="#step-6" onclick="openStep('#step-6')">Step 6</a> again to update your live site.
+				</p>
+				<p>
+					If you’re ever confused, you can always check out <a href="https://pathfinder.gdwithgd.com/" target="_blank">Pathfinder</a> to see a more in-depth example of how folder structure and file paths work on a live website! Plus, you can download a <a href="https://pathfinder.gdwithgd.com/site-template.zip">template</a> to get a head start on making your own multi-page website.
+				</p>
+				<p class="step-callout">
+					<strong>OK, I lied a little bit in this section.</strong>
+					<span>Even though it’s ugly, you’re likely to encounter situations in the real world where organizations have multiple .html files in one folder. <a href="https://www.nytimes.com/2024/08/27/arts/music/oasis-reunion-tour.html" target="_blank">Here’s an example from The New York Times</a>, which we can tell uses the folder structure <span class="text-highlight">2024/08/27/arts/music/</span> from the URL structure.</span>
 				</p>
 			</div>
 		</section>
@@ -660,6 +1091,38 @@
 				<span class="step-title-name">Connect to a custom URL</span>
 			</h2>
 			<div class="step-content">
+				<p>
+					Are you tired of your long, GitHub-branded URL? Good news — custom URLs are cheap, and it’s easy to connect one to your GitHub repository! They’re also totally optional, so feel free to skip this step if you’d like.
+				</p>
+				<div class="step-divider"></div>
+				<h3>
+					<span class="step-content-subtitle">Part 1</span>
+					<span class="step-content-title">Purchasing a URL</span>
+				</h3>
+				<p>
+					First, you should understanding that there are two sides to launching a site:
+				</p>
+				<ul>
+					<li>You site’s files have to be <strong>hosted</strong> on a server somewhere. This is literally a computer that stores your code, media, etc. If you’re launching your site using GitHub, that means that one of GitHub’s servers has your site’s files.</li>
+					<li>Your site also needs a <strong>domain name</strong> (a.k.a. URL) that people can use to access your site’s files. GitHub provides URLs for free in the format <span class="text-highlight">[your-github-username].github.io/[repository-name]</span>. If you want something more unique, you’ll have to pay a <strong>registrar</strong> a subscription fee to use a URL of your choosing.</li>
+				</ul>
+				<p>
+					So, we need to pay a registrar some money then! There are dozens of registrars out there, many of which offer good prices and service. I personally use <a href="https://www.namecheap.com/" target="_blank">Namecheap</a> for most of my URLs, and I’ve heard good things about <a href="https://porkbun.com/" target="_blank">Porkbun</a> and <a href="https://www.cloudflare.com/products/registrar/" target="_blank">Cloudflare</a>. Whatever service you go with, I do NOT recommend GoDaddy because they charge more and have stinky products (personal biased opinion). Also, you’re able to buy a URL from one registrar and switch to another later for a fee.
+				</p>
+				<p>
+					Domains are subscriptions that typically cost less than $20 per year per domain. Sometimes, if a domain is a short phrase and someone already owns it, they’ll resell it for a high cost, after which the subscription will still be under $20 per year. Domains can go up to tens of thousands of dollars!
+				</p>
+				<p>
+					There’s also the matter of the <strong>top-level domain (TLD)</strong>. This is the part that comes after the period, like <span class="text-highlight">.com</span> or <span class="text-highlight">.org</span>. Some TLDs are reserved for things like governmental use only, but most of them are actually owned and sold by specific countries. For example, the <span class="text-highlight">.io</span> TLD is owned by the British Indian Ocean Territory! It doesn’t matter who owns the TLD — most of them are fair game when purchasing a URL and you don’t have to worry about the name not working in the future. There are even still TLDs out there for <a href="https://snapshot.internetx.com/en/these-tlds-do-not-exist-anymore/" target="_blank">countries that no longer exist</a>. For a full list of TLDs, check out <a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains" target="_blank">this page</a>.
+				</p>
+				<div class="step-divider"></div>
+				<h3>
+					<span class="step-content-subtitle">Part 2</span>
+					<span class="step-content-title">Setting up a custom URL</span>
+				</h3>
+				<p>
+					Here are instructions for connecting a domain purchased from Namecheap to a site hosted on GitHub:
+				</p>
 				<div class="step-list">
 					<div class="step-list-item">
 						<div class="step-list-item-number">8.1</div>
@@ -668,7 +1131,7 @@
 								Make an account on <a href="https://www.namecheap.com/" target="_blank">namecheap.com</a>.
 							</p>
 							<p class="step-list-item-text-small">
-								If you’re a student, make sure to use your personal email and not a school address. Namecheap is a marketplace for leasing domains (URLs) from, but there are many other competing services for the same thing. Domain names cannot be purchased outright, so we buy from companies like Namecheap because they handle a lot of the expensive logistics that go into internationally managing domain licenses.
+								If you’re a student, make sure to use your personal email and not a school address — you’ll want to keep this account for a long time!
 							</p>
 						</div>
 					</div>
@@ -738,7 +1201,7 @@
 								<span class="text-highlight">Type: CNAME, Host: www, Value: [your-github-username].github.io</span>
 							</p>
 							<p class="step-list-item-text-small">
-								These records point your domain to your GitHub account. Alternatively, you can have your site live on a subdomain of your URL. This is like the “babysteps” part of “babysteps.gdwithgd.com”. To do this, add the following record instead of the “CNAME” record listed above: <span class="text-highlight">Type: CNAME, Host: [subdomain-name], Value: [your-github-username].github.io</span>. There is no limit to the number of subdomains you can host on a single domain.
+								These records point your domain to your GitHub account.
 							</p>
 						</div>
 					</div>
@@ -749,7 +1212,7 @@
 								On github.com, go to your repository’s page, click <span class="text-highlight">Settings</span>, and then go to the <span class="text-highlight">Pages</span> submenu from the sidebar.
 							</p>
 							<p class="step-list-item-text-small">
-								You can access your repository’s page by pressing <span class="text-highlight">Mac: COMMAND+SHIFT+G</span> <span class="text-highlight">Windows: CTRL+SHIFT+G</span> in GitHub Desktop, or by clicking your profile picture on github.com and then going to Your repositories.
+								You can access your repository’s page by pressing <span class="text-highlight">Mac: COMMAND+SHIFT+G</span> <span class="text-highlight">Windows: CTRL+SHIFT+G</span> in GitHub Desktop. Or, go to github.com, click your profile picture in the top-left corner, navigate to <span class="text-highlight">Your repositories</span>, and select your repository from the list.
 							</p>
 						</div>
 					</div>
@@ -757,7 +1220,7 @@
 						<div class="step-list-item-number">8.10</div>
 						<div class="step-list-item-text">
 							<p>
-								In the <span class="text-highlight">Custom domain</span> field, add the url of the domain name you are trying to connect (e.g. gdwithgd.com). Press <span class="text-highlight">Save</span>.
+								In the <span class="text-highlight">Custom domain</span> field, add the url of the domain name you are trying to connect (e.g. gdwithgd.com). Press <span class="text-highlight">Save</span>
 							</p>
 							<p class="step-list-item-text-small">
 								You must have already launched your site on GitHub Pages to see this field.
@@ -768,18 +1231,206 @@
 						<div class="step-list-item-number">8.11</div>
 						<div class="step-list-item-text">
 							<p>
-								Your site will now go through some automatic checks to make sure everything is working properly. Once those checks are complete, check <span class="text-highlight">Enforce HTTPS</span>. You may need to refresh the <span class="text-highlight">Pages</span> page before checking the option.
+								Your site will now go through some automatic checks to make sure everything is working properly. Once those checks are complete, select <span class="text-highlight">Enforce HTTPS</span>. You may need to refresh the <span class="text-highlight">Pages</span> page a few times before that option becomes available.
 							</p>
 							<p class="step-list-item-text-small">
-								HTTPS is a security protocol that all modern sites should have. Learn more about it <a href="https://www.cloudflare.com/learning/ssl/what-is-https/" target="_blank">here</a>.
+								HTTPS is a security protocol that all modern sites are (generally) required to have. Learn more about it <a href="https://www.cloudflare.com/learning/ssl/what-is-https/" target="_blank">here</a>.
 							</p>
 						</div>
 					</div>
 				</div>
+				<p>
+					And now your site uses a custom URL!
+				</p>
+				<div class="step-divider"></div>
+				<h3>
+					<span class="step-content-subtitle">Part 3</span>
+					<span class="step-content-title">Setting up a subdomain</span>
+				</h3>
+				<p>
+					You can also add as many <strong>subdomains</strong> to your site as you want. For example, this site’s URL is <span class="text-highlight">babysteps.gdwithgd.com</span>, so the subdomain is <span class="text-highlight">babysteps</span> (anything that comes before the main URL, separated by a period).
+				</p>
+				<p>
+					Here’s how to add a subdomain to your URL:
+				</p>
+				<div class="step-list">
+					<div class="step-list-item">
+						<div class="step-list-item-number">8.12</div>
+						<div class="step-list-item-text">
+							<p>
+								After you’ve purchased a domain, head back to its DNS records (Steps 8.1–8.8).
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">8.13</div>
+						<div class="step-list-item-text">
+							<p>
+								In addition to the <span class="text-highlight">A</span> and <span class="text-highlight">CNAME</span> records from before, add the following record: <span class="text-highlight">Type: CNAME, Host: [subdomain-name], Value: [your-github-username].github.io</span>
+							</p>
+						</div>
+					</div>
+					<div class="step-list-item">
+						<div class="step-list-item-number">8.14</div>
+						<div class="step-list-item-text">
+							<p>
+								Repeat Steps 8.9–8.11, except put in your desired subdomain in the <span class="text-highlight">Custom domain</span> field this time. For example, I might put <span class="text-highlight">babysteps.gdwithgd.com</span> in this field.
+							</p>
+						</div>
+					</div>
+				</div>
+				<p>
+					And now, just like me, you can have as many websites as you want while only paying for one URL!
+				</p>
+			</div>
+		</section>
+
+		<section class="step" id="step-9" data-active="0" style="--primary: var(--blue);">
+			<h2 class="step-title">
+				<span class="step-title-number">9</span>
+				<span class="step-title-name">Adding CSS and JavaScript to your site</span>
+			</h2>
+			<div class="step-content">
+				<p>
+					There are three languages that websites use:
+				</p>
+				<ul>
+					<li><strong>HTML (Hypertext Markup Language)</strong> for organizing content, like text and media files (images, videos, sound, etc.). This is the only programming language that websites require.</li>
+					<li><strong>CSS (Cascading Style Sheet)</strong> for designing that content. Basically every website uses CSS in some capacity, otherwise it’ll look like <a href="https://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">this</a>.</li>
+					<li><strong>JS (JavaScript)</strong> for adding deeper functionality to that content. This is the most advanced of the languages and is not necessary for most basic websites. (But it can be super fun!)</li>
+				</ul>
+				<p>
+					This section will go over the basics of how HTML, CSS, and JavaScript work together. I won’t go too far in-depth, so if you want to learn more then I recommend you check out <a href="https://cheatsheet.gdwithgd.com/" target="_blank">Cheatsheet</a>!
+				</p>
+				<div class="step-divider"></div>
+				<h3>
+					<span class="step-content-subtitle">Hypertext Markup Language</span>
+					<span class="step-content-title">HTML</span>
+				</h3>
+				<p>
+					If followed this tutorial so far, then you’ve coded in HTML! At a minimum, a live website requires an <span class="text-highlight">index.html</span> file. The file extension <span class="text-highlight">.html</span> indicates that your file contains HTML code.
+				</p>
+				<p>
+					When we made links in <a href="#step-7" onclick="openStep('#step-7')">Step 7</a>, we learned that HTML code uses things called <strong>elements</strong> to organize content. Here’s an example of a paragraph in HTML:
+				</p>
+				<p>
+					<span class="text-highlight"><span style="color: var(--pink);">&lt;p&gt;<span style="color: var(--green);">I’m a paragraph!</span><span style="color: var(--blue);">&lt;/p&gt;</span></span>
+				</p>
+				<p>
+					I color-coded the element so that we can break down it’s structure:
+				</p>
+				<ul>
+					<li><strong style="color: var(--pink);">Pink:</strong> the opening tag, which marks the start of the element. This part of the element will be invisible on the live site. The opening tag also indicates which kind of element we’re creating, which we know is a paragraph because of the letter <span class="text-highlight">p</span></li>
+					<li><strong style="color: var(--green);">Green:</strong> the visible content of your element.</li>
+					<li><strong style="color: var(--blue);">Blue:</strong> the closing tag, which copies the opening tag with an additional <span class="text-highlight">/</span> symbol.</li>
+				</ul>
+				<p>
+					For a list of possible HTML elements, check out <a href="https://cheatsheet.gdwithgd.com/html/" target="_blank">Cheatsheet</a>!
+				</p>
+				<p>
+					When you make a new HTML file in Visual Studio Code, you can type <span class="text-highlight">!</span> and press enter to generate an HTML template. This file contains two major sections you should know about:
+				</p>
+				<ul>
+					<li>The <span class="text-highlight">&lt;head&gt;&lt;/head&gt;</span> section, which contains invisible <strong>metadata</strong> about your site, like what title to display in the tab bar.</li>
+					<li>The <span class="text-highlight">&lt;body&gt;&lt;/body&gt;</span> section, which contains your page’s visible content.</li>
+				</ul>
+				<div class="step-divider"></div>
+				<h3>
+					<span class="step-content-subtitle">Cascading Style Sheets</span>
+					<span class="step-content-title">CSS</span>
+				</h3>
+				<p>
+					If you want your site to look prettier, you’ll need to start coding using CSS. By itself, CSS does very little. But when you attach CSS to HTML, you can make a website look like the one you’re currently on (which I think is pretty)! In fact, <a href="#step-9" onclick="toggleCSS()">click this</a> if you want to see what this website looks like without CSS. (You’ll probably have to refresh the page to get back to this section!)
+				</p>
+				<p>
+					There are three ways to add CSS to an HTML document:
+				</p>
+				<ul>
+					<li><strong>Inline CSS</strong>, which goes inside of HTML elements directly.</li>
+					<li><strong>Internal CSS</strong>, which goes at the top of the HTML file.</li>
+					<li><strong>External CSS</strong>, which has its own file using the extension <span class="text-highlight">.css</span></li>
+				</ul>
+				<p>
+					Here’s an example of a paragraph element with <strong>inline CSS</strong>:
+				</p>
+				<p>
+					<span class="text-highlight" style="--primary: rgba(255,255,255,.25)">&lt;p <span style="color: var(--pink);">style="</span><span style="color: var(--green);">color:</span> <span style="color: var(--blue);">red;</span> <span style="color: var(--green);">font-size:</span> <span style="color: var(--green);">24px;</span><span style="color: var(--pink);">"</span>&gt;Hello!&lt;/p&gt;</span>
+				</p>
+				<p>
+					And here’s how that breaks down:
+				</p>
+				<ul>
+					<li><strong style="color: var(--pink);">Pink:</strong> the <span class="text-highlight">style</span> <strong>attribute</strong>, which goes inside of the opening tag of the element. The code inside the quotes <span class="text-highlight">" "</span> will be interpreted as CSS.</li>
+					<li><strong style="color: var(--green);">Green:</strong> a CSS <strong>property</strong>, which indicates what aspect of the element’s design we want to change. This is always followed by a colon <span class="text-highlight">:</span></li>
+					<li><strong style="color: var(--blue);">Blue:</strong> a <strong>value</strong> to set each property to. This is always followed by a semicolon <span class="text-highlight">;</span></li>
+				</ul>
+				<p>
+					For a list of possible CSS properties and values, check out <a href="https://cheatsheet.gdwithgd.com/css/" target="_blank">Cheatsheet</a>!
+				</p>
+				<p>
+					<strong>Internal CSS</strong> uses its own HTML element, which we indicate using the <span class="text-highlight">&lt;style&gt;&lt;/style&gt;</span> tags. This lets us organize CSS into <strong>classes</strong> so that we can apply the same styles to multiple elements without repeating our code over and over. For an example of internal CSS and classes, check out <a href="https://demoland.gdwithgd.com/editor/?book=tutorial&chapter=tutorial&demo=template" target="_blank">this demo</a>. Note that internal CSS should be added right before the <span class="text-highlight">&lt;/head&gt;</span> tag in your HTML file.
+				</p>
+				<p>
+					<strong>External CSS</strong> is stored in an entirely separate file from your HTML code. This file is typically called something like <span class="text-highlight">style.css</span> and contains the same formatting as internal CSS. The advantage of external CSS is that you can reference the same classes across multiple pages on your site.
+				</p>
+				<p>
+					To add external CSS to your website, you’ll need the following element somewhere in your <span class="text-highlight">&lt;head&gt;&lt;/head&gt;</span> section:
+				</p>
+				<p>
+					<span class="text-highlight">&lt;link rel="stylesheet" href="[path-to-css-file]"&gt;</span>
+				</p>
+				<p>
+					The path could be something like <span class="text-highlight">assets/code/style.css</span> depending on your folder structure. Also, note that this particular HTML element does NOT have a closing tag.
+				</p>
+				<p>
+					Check out <a href="https://pathfinder.gdwithgd.com/" target="_blank">Pathfinder</a> to see an example of an external CSS file! You can also try downloading a <a href="https://pathfinder.gdwithgd.com/site-template.zip">site template</a> to experiment with external CSS yourself.
+				</p>
+				<div class="step-divider"></div>
+				<h3>
+					<span class="step-content-subtitle">JavaScript</span>
+					<span class="step-content-title">JS</span>
+				</h3>
+				<p>
+					This language is not to be confused with <strong>Java</strong>, which is an entirely different programming language that websites DON’T use!
+				</p>
+				<p>
+					JavaScript is a more typical programming language when compared to HTML and CSS. If you learn how to code in JavaScript, then you’ll be able to transfer that knowledge to most other programming languages. Meanwhile, HTML and CSS are more specific to the web.
+				</p>
+				<p>
+					JavaScript lets you do all sorts of things! You can even dynamically change HTML and CSS code using JavaScript, like on the <a href="https://generator.gdwithgd.com/" target="_blank">GD with GD Generator</a>.
+				</p>
+				<p>
+					There are two main ways of adding JavaScript to your file that are very similar to adding CSS:
+				</p>
+				<ul>
+					<li><strong>Internal JavaScript</strong>, which goes at the bottom of the HTML file.</li>
+					<li><strong>External JavaScript</strong>, which lives in its own file using the extension <span class="text-highlight">.js</span></li>
+				</ul>
+				<p>
+					I’m not going to talk at all about how to write JavaScript, because it’s much harder to sum up than HTML and CSS. Instead, I’ll just tell you where to put it in your code.
+				</p>
+				<p>
+					To add <strong>internal JavaScript</strong>, add a <span class="text-highlight">&lt;script&gt;&lt;/script&gt;</span> right before the <span class="text-highlight">&lt;/body&gt;</span> tag.
+				</p>
+				<p>
+					To add <strong>external JavaScript</strong>, you’ll also want to add a a <span class="text-highlight">&lt;script&gt;&lt;/script&gt;</span> right before the <span class="text-highlight">&lt;/body&gt;</span> tag. In this case, the new element will look something like the following:
+				</p>
+				<p>
+					<span class="text-highlight">&lt;script src="[path-to-js-file]"&gt;&lt;/script&gt;</span>
+				</p>
+				<p>
+					The path could be something like <span class="text-highlight">assets/code/script.js</span> depending on your folder structure.
+				</p>
+				<p>
+					Check out <a href="https://pathfinder.gdwithgd.com/" target="_blank">Pathfinder</a> to see an example of an external JS file! You can also try downloading a <a href="https://pathfinder.gdwithgd.com/site-template.zip">site template</a> to experiment with external JS yourself.
+				</p>
+				<p>
+					If you’re interested in learning how to code in JavaScript, check out <a href="https://cheatsheet.gdwithgd.com/" target="_blank">Cheatsheet</a>!
+				</p>
 			</div>
 		</section>
 	</main>
 
-	<script src="script.js"></script>
+	<script src="/script.js"></script>
 </body>
 </html>
