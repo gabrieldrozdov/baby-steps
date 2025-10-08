@@ -79,7 +79,7 @@ body {
 	font-weight: 100;
 	text-wrap: balance;
 	padding: 0 20px;
-	letter-spacing: -.1em;
+	letter-spacing: -.05em;
 }
 @media (max-width: 600px) {
 	.header-desc {
@@ -160,7 +160,7 @@ body {
 	width: 60px;
 	height: 60px;
 	padding-top: .2em;
-	letter-spacing: -0.05em;
+	letter-spacing: -0.03em;
 	color: var(--primary);
 	border: .1em solid var(--primary);
 	background-color: rgba(0,0,0,.5);
@@ -244,7 +244,7 @@ body {
 	transition: box-shadow .1s;
 }
 .step-title-name {
-	letter-spacing: -.1em;
+	letter-spacing: -.05em;
 	padding-top: .05em;
 }
 .step-title:hover .step-title-number {
@@ -291,7 +291,7 @@ body {
 	border: unset;
 }
 .step[data-active="1"] .step-title-name {
-	letter-spacing: -0.05em;
+	letter-spacing: -0.03em;
 	padding-top: .2em;
 }
 .step[data-active="1"] .step-title:hover {
@@ -348,14 +348,13 @@ body {
 	font-size: clamp(18px, 2vw, 40px);
 	line-height: 1.2em;
 	color: var(--primary);
-	letter-spacing: -0.02em;
 	font-variation-settings: "wght" 700, "SRFF" 0;
 	font-weight: 700;
 }
 .step-content-title {
 	font-size: clamp(36px, 4vw, 72px);
 	line-height: 1em;
-	letter-spacing: -0.05em;
+	letter-spacing: -0.04em;
 	font-variation-settings: "wght" 700, "SRFF" 0;
 	font-weight: 700;
 }
@@ -364,14 +363,12 @@ body {
 	margin: 0 auto;
 	max-width: 30em;
 	text-wrap: pretty;
-	letter-spacing: -0.02em;
 }
 .step-content ul {
 	width: 100%;
 	margin: 0 auto;
 	max-width: 30em;
 	text-wrap: pretty;
-	letter-spacing: -0.02em;
 	list-style: "→  ";
 	padding-left: 1.2em;
 }
@@ -410,8 +407,6 @@ body {
 	font-variation-settings: "wght" 800, "SRFF" 0;
 	font-weight: 800;
 	padding-top: .2em;
-	padding-right: .04em;
-	letter-spacing: -.04em;
 	background-color: var(--primary);
 	box-shadow: 0 0 10px var(--primary);
 	color: var(--off-black);
